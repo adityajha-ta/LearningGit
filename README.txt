@@ -23,3 +23,11 @@ Git Internals:
 	Instead of remembering the commit address, we can reference the address with something more readable -- comes in the .git/ref directory -- can use --update-refs to update a reference to a new address, it is called when we 'git branch <branch>'. HEAD is the symbolic reference to the branch which is checked out, we can commit the changes to the branch where the HEAD is. When we 'git commit', the parent of the git object is the address where the HEAD points.
 	
 	'git cat-file -p file' inspects the contents of the 'file' object and displays it.
+	'git diff' shows the difference between the tracked and untracked progress.
+	'git rm file' to stage the deletion of the file.
+	'git log -p -2': -p stands for patch, and we'll see comparison b/w the last 2 commits.
+	'git log --pretty=format' formats the log files in a specific way, might be useful for parsing.
+	git log has many important functionalities in terms of version control and debugging.
+	To UNDO a commit, we can 'git commit --ammend'; a change from staged to untracked -- move the HEAD to the file which needs to be unstaged.
+	
+	'git remote add origin url' used to add a remote repository. There might be other versions of the project present remotely -- use of remote repository.
