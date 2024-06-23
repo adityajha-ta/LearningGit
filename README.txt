@@ -47,5 +47,21 @@ A branch in git is a movable pointer to one of the commits. The default branch n
 'git checkout <branch>': moves HEAD to this branch, we can now commit in this branch
 	Before switching branches, its best to not keep any uncommited changes
 'git merge <branch>': merges the <branch> with the current branch
+-------------------------------------------------
+Remote Branches:
+name is of the form <remote>/<branch>: we cannot update it, it automatically gets updated when the commits are pushed, shows the current state of remote repo.
+Remote branches can be added, commits can be fetched and then it needs to be merged with the current line of commits.
+'git fetch origin': lets say we have a new branch in remote repo which is now in my local repo. Upon fetching we only have a new pointer origin/<newbranch> which isn't modifiable, to modify this remote branch we need to add a new local branch starting from origin/.. pointer and finally we can push the changes to change the location of the origin/.. pointer. [git checkout --track origin/<branch> does this]
 
+'git branch -vv': tracks the remote branch and updates done on the local system on this branch.
+
+git pull = git fetch + git merge
+---------------------------------------------------
+Rebasing
+
+Instead of merging two branches, we can go to the commen ancestor of the two branches and rebase the work of one of the branches on another by using something like 'git diff' functioanlity.
+
+Rebasing makes the commit history look linear even if there were multiple branches initially: upon rebasing, we can merge the branch with the 'master'.
+
+.
 	
