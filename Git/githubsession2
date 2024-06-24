@@ -1,0 +1,829 @@
+Script started on 2024-06-22 09:38:06+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+(base) aditya@aditya-Aspire-A715-75G:~$ conda deactia[Kvate
+aditya@aditya-Aspire-A715-75G:~$ cd LearningGit/
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README.txt[m
+	[32mnew file:   test.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ cat .gitignir[K[Kore
+cat: .gitignore: No such file or directory
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ nnao[K[K[K[Knano[K[K[K[Kgedit .gitignor[K[K[K[K[K[Ktignore
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log >> log[K[K[Ksess.log
+fatal: your current branch 'master' does not have any commits yet
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --stat 7baca1 >> sess.log
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git diff
+[?1h=[1mdiff --git a/README.txt b/README.txt[m[m
+[1mindex b88da5a..827d5a3 100644[m[m
+[1m--- a/README.txt[m[m
+[1m+++ b/README.txt[m[m
+[36m@@ -21,3 +21,5 @@[m [mGit Internals:[m[m
+        Git is a key-value data store, i.e. a map. We can insert any information and Git will return [m us a unique key to use later to retrieve the data. To store data, there is a blob object which has a [m unique SHA-1 key. Trees along with blobs store the extensive data of any repository. Tree object stor[m es a pointer to all the blobs and sub-trees within it. We can construct our own tree by first updatin[m g the index folder (staging our files), then creating blobs which store the data and has unique addre[m sses and we 'git write-tree' to store these blobs. It stores all the versions of the staged files. Fi[m nally, we commit these tracked changes by storing some additional information about the changes -- th[m us we commit by creating a commit-tree where we can pass the SHA-1 of a single tree and of any precee[m ding commits.[m[m
+        [m[m
+        Instead of remembering the commit address, we can reference the address with something more r[m eadable -- comes in the .git/ref directory -- can use --update-refs to update a reference to a new ad[m dress, it is called when we 'git branch <branch>'. HEAD is the symbolic reference to the branch which[m  is checked out, we can commit the changes to the branch where the HEAD is. When we 'git commit', the[m  parent of the git object is the address where the HEAD points.[m[m
+[32m+[m[41m       [m[m
+[32m+[m       [32m'git cat-file -p file' inspects the contents of the 'file' object and displays it.[m[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ gi [Kt diff --stages
+[?1h=error: invalid option: --stages[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git diff --stages[Kd
+[?1h=[1mdiff --git a/README.txt b/README.txt[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..b88da5a[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README.txt[m[m
+[36m@@ -0,0 +1,23 @@[m[m
+[32m+[m[32mGit stores the files in the form of streams of snapshots.[m[41m [m[m
+[32m+[m[m
+[32m+[m[32mGit has three main stages-[m[m
+[32m+[m       [32m- Modified: Here we make the changes in the files[m[m
+[32m+[m       [32m- Stages: marked the modified file in its current version to be commited[m[41m [m[m
+[32m+[m       [32m- Commited means data is stored in the local database[m[m
+[32m+[m[m
+[32m+[m[32mStart with 'git config --list --show-origin': lists down all the current settings.[m[m
+[32m+[m[m
+[32m+[m[32mTake an empty repository, start with 'git init': creates a folder ./.git/[m[m
+[32m+[m[m
+[32m+[m[32mGit Internals:[m[m
+[32m+[m[m
+[32m+[m       [32m'Plumbing' commands are low level subcommands whereas 'Porcelain' commands are the user-frien[m [32m[m[32mdly commands.[m[m
+[32m+[m       [32mInside the .git directory the four important entries are:[m[m
+[32m+[m               [32m- objects directories stores all the content of the database[m[m
+[32m+[m               [32m- refs directory stores pointers into commit objects in the data[m[m
+[32m+[m               [32m- HEAD file points to the branch currently checked out[m[m
+[32m+[m               [32m- index directory stores the staging area information.[m[m
+[32m+[m[41m       [m[m
+[32m+[m       [32mGit is a key-value data store, i.e. a map. We can insert any information and Git will return [m [32m[m[32mus a unique key to use later to retrieve the data. To store data, there is a blob object which has a [m [32m[m[32munique SHA-1 key. Trees along with blobs store the extensive data of any repository. Tree object stor[m [32m[m[32mes a pointer to all the blobs and sub-trees within it. We can construct our own tree by first updatin[m [32m[m[32mg the index folder (staging our files), then creating blobs which store the data and has unique addre[m [32m[m[32msses and we 'git write-tree' to store these blobs. It stores all the versions of the staged files. Fi[m [32m[m[32mnally, we commit these tracked changes by storing some additional information about the changes -- th[m [32m[m[32mus we commit by creating a commit-tree where we can pass the SHA-1 of a single tree and of any precee[m [32m[m[32mding commits.[m[m
+[32m+[m[41m       [m[m
+[32m+[m       [32mInstead of remembering the commit address, we can reference the address with something more r[m [32m[m[32meadable -- comes in the .git/ref directory -- can use --update-refs to update a reference to a new ad[m [32m[m[32mdress, it is called when we 'git branch <branch>'. HEAD is the symbolic reference to the branch which[m [32m[m[32m is checked out, we can commit the changes to the branch where the HEAD is. When we 'git commit', the[m [32m[m[32m parent of the git object is the address where the HEAD points.[m[m
+[1mdiff --git a/test.txt b/test.txt[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..0c1e739[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/test.txt[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32mversion 1[m[m
+[32m+[m[32mversion 2[m[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git statis[K[Kus -s
+[32mA[m[31mM[m README.txt
+[32mA[m  test.txt
+[31m??[m .gitignore
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add .
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add .status -s
+[32mA[m  .gitignore
+[32mA[m  README.txt
+[32mA[m  test.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+README.txt  sess.log  test.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m "First COmmi[K[K[K[Kommit"
+[master (root-commit) 12e74a5] First Commit
+ 3 files changed, 28 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.txt
+ create mode 100644 test.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log
+[?1h=[33mcommit 12e74a550615eaefed5914b316e13624994dcf2a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 10:19:43 2024 +0530[m
+[m
+    First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p 12e74a
+tree 07ffa3124b1a35728fcd813b06d14906dc4f1d0b
+author aditya-jha13 <jha.aditya2121@gmail.com> 1719031783 +0530
+committer aditya-jha13 <jha.aditya2121@gmail.com> 1719031783 +0530
+
+First Commit
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p 7baca1
+tree ccd32bd3c80b41134614cef2ac2a7b49217521de
+author aditya-jha13 <jha.aditya2121@gmail.com> 1719026926 +0530
+committer aditya-jha13 <jha.aditya2121@gmail.com> 1719026926 +0530
+
+First Commit
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+README.txt  sess.log  test.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo "useless" >> remove [K.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a -m 'will be removed!'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mremove.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mremove.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cm[Kommit -a -m 
+error: switch `m' requires a value
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a -m 'will be removed.'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mremove.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a -m 'will be removed.'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mremove.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add .
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m 'untrac[K[K[K[K[K[K[K'to be deleted.'
+[master e006d60] to be deleted.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 remove.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m 'to be deleted.'add .[Kcommit -a -m 'will be removed.'[K[7Pstatus
+On branch master
+nothing to commit, working tree clean
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git rm remove.txt 
+rm 'remove.txt'
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ fit [K[K[K[Kgit status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mdeleted:    remove.txt[m
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cimm[K[K[Kommit -m 'removed!'
+[master 4f2365e] removed!
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 remove.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log
+[?1h=[33mcommit 4f2365ea95c2d1656e021e2e8ae3012e1ad1c48a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 11:19:30 2024 +0530[m
+[m
+    removed![m
+[m
+[33mcommit e006d6087d2ba93ab331ecdaa00a33b60562a76d[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 11:16:46 2024 +0530[m
+[m
+    to be deleted.[m
+[m
+[33mcommit 12e74a550615eaefed5914b316e13624994dcf2a[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 10:19:43 2024 +0530[m
+[m
+    First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log -p -2
+[?1h=[33mcommit 4f2365ea95c2d1656e021e2e8ae3012e1ad1c48a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 11:19:30 2024 +0530[m
+[m
+    removed![m
+[m
+[1mdiff --git a/remove.txt b/remove.txt[m[m
+[1mdeleted file mode 100644[m[m
+[1mindex f1aea69..0000000[m[m
+[1m--- a/remove.txt[m[m
+[1m+++ /dev/null[m[m
+[36m@@ -1 +0,0 @@[m[m
+[31m-useless[m[m
+[m
+[33mcommit e006d6087d2ba93ab331ecdaa00a33b60562a76d[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 11:16:46 2024 +0530[m
+[m
+    to be deleted.[m
+[m
+[1mdiff --git a/remove.txt b/remove.txt[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..f1aea69[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/remove.txt[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32museless[m[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log -p -2[K3
+[?1h=[33mcommit 4f2365ea95c2d1656e021e2e8ae3012e1ad1c48a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 11:19:30 2024 +0530[m
+[m
+    removed![m
+[m
+[1mdiff --git a/remove.txt b/remove.txt[m[m
+[1mdeleted file mode 100644[m[m
+[1mindex f1aea69..0000000[m[m
+[1m--- a/remove.txt[m[m
+[1m+++ /dev/null[m[m
+[36m@@ -1 +0,0 @@[m[m
+[31m-useless[m[m
+[m
+[33mcommit e006d6087d2ba93ab331ecdaa00a33b60562a76d[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 11:16:46 2024 +0530[m
+[m
+    to be deleted.[m
+[m
+[1mdiff --git a/remove.txt b/remove.txt[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..f1aea69[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/remove.txt[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32museless[m[m
+[m
+[33mcommit 12e74a550615eaefed5914b316e13624994dcf2a[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 10:19:43 2024 +0530[m
+[m
+    First Commit[m
+[m
+[1mdiff --git a/.gitignore b/.gitignore[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..397b4a7[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/.gitignore[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32m*.log[m[m
+[1mdiff --git a/README.txt b/README.txt[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..827d5a3[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README.txt[m[m
+[36m@@ -0,0 +1,25 @@[m[m
+[32m+[m[32mGit stores the files in the form of streams of snapshots.[m[41m [m[m
+[32m+[m[m
+[32m+[m[32mGit has three main stages-[m[m
+[32m+[m       [32m- Modified: Here we make the changes in the files[m[m
+[32m+[m       [32m- Stages: marked the modified file in its current version to be commited[m[41m [m[m
+[32m+[m       [32m- Commited means data is stored in the local database[m[m
+[32m+[m[m
+:[K[K[32m+[m[32mStart with 'git config --list --show-origin': lists down all the current settings.[m[m
+:[K[K[32m+[m[m
+:[K[K[32m+[m[32mTake an empty repository, start with 'git init': creates a folder ./.git/[m[m
+:[K[K:[K[K:[K[K[32m+[m[m
+:[K[K[32m+[m[32mGit Internals:[m[m
+:[K[K[32m+[m[m
+:[K[K[32m+[m       [32m'Plumbing' commands are low level subcommands whereas 'Porcelain' commands are the user-frien[m :[K[K[32m[m[32mdly commands.[m[m
+:[K[K[32m+[m       [32mInside the .git directory the four important entries are:[m[m
+:[K[K[32m+[m               [32m- objects directories stores all the content of the database[m[m
+:[K[K[32m+[m               [32m- refs directory stores pointers into commit objects in the data[m[m
+:[K[K[32m+[m               [32m- HEAD file points to the branch currently checked out[m[m
+:[K[K[32m+[m               [32m- index directory stores the staging area information.[m[m
+:[K[K[32m+[m[41m       [m[m
+:[K[K[32m+[m       [32mGit is a key-value data store, i.e. a map. We can insert any information and Git will return [m :[K[K[32m[m[32mus a unique key to use later to retrieve the data. To store data, there is a blob object which has a [m :[K[K[32m[m[32munique SHA-1 key. Trees along with blobs store the extensive data of any repository. Tree object stor[m :[K[K[32m[m[32mes a pointer to all the blobs and sub-trees within it. We can construct our own tree by first updatin[m :[K[K[32m[m[32mg the index folder (staging our files), then creating blobs which store the data and has unique addre[m :[K[K[32m[m[32msses and we 'git write-tree' to store these blobs. It stores all the versions of the staged files. Fi[m :[K[K[32m[m[32mnally, we commit these tracked changes by storing some additional information about the changes -- th[m :[K[K[32m[m[32mus we commit by creating a commit-tree where we can pass the SHA-1 of a single tree and of any precee[m :[K[K[32m[m[32mding commits.[m[m
+:[K[K[32m+[m[41m       [m[m
+:[K[K[32m+[m       [32mInstead of remembering the commit address, we can reference the address with something more r[m :[K[K[32m[m[32meadable -- comes in the .git/ref directory -- can use --update-refs to update a reference to a new ad[m :[K[K[32m[m[32mdress, it is called when we 'git branch <branch>'. HEAD is the symbolic reference to the branch which[m :[K[K[32m[m[32m is checked out, we can commit the changes to the branch where the HEAD is. When we 'git commit', the[m :[K[K[32m[m[32m parent of the git object is the address where the HEAD points.[m[m
+:[K[K[32m+[m[41m       [m[m
+:[K[K[32m+[m       [32m'git cat-file -p file' inspects the contents of the 'file' object and displays it.[m[m
+:[K[K[1mdiff --git a/test.txt b/test.txt[m[m
+:[K[K[1mnew file mode 100644[m[m
+:[K[K[1mindex 0000000..0c1e739[m[m
+:[K[K[1m--- /dev/null[m[m
+:[K[K[1m+++ b/test.txt[m[m
+:[K[K[36m@@ -0,0 +1,2 @@[m[m
+:[K[K[32m+[m[32mversion 1[m[m
+:[K[K[32m+[m[32mversion 2[m[m
+:[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[7m(END)[27m[K[K[?1l>
+[1]+  Stopped                 git log -p -3
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --pretty=oneline
+[?1h=[33m4f2365ea95c2d1656e021e2e8ae3012e1ad1c48a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m removed![m
+[33me006d6087d2ba93ab331ecdaa00a33b60562a76d[m to be deleted.[m
+[33m12e74a550615eaefed5914b316e13624994dcf2a[m First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --pretty=oneline[K[K[K[K[K[K[Kfull
+[?1h=[33mcommit 4f2365ea95c2d1656e021e2e8ae3012e1ad1c48a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Commit: aditya-jha13 <jha.aditya2121@gmail.com>[m
+[m
+    removed![m
+[m
+[33mcommit e006d6087d2ba93ab331ecdaa00a33b60562a76d[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Commit: aditya-jha13 <jha.aditya2121@gmail.com>[m
+[m
+    to be deleted.[m
+[m
+[33mcommit 12e74a550615eaefed5914b316e13624994dcf2a[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Commit: aditya-jha13 <jha.aditya2121@gmail.com>[m
+[m
+    First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --pretty=fuller
+[?1h=[33mcommit 4f2365ea95c2d1656e021e2e8ae3012e1ad1c48a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author:     aditya-jha13 <jha.aditya2121@gmail.com>[m
+AuthorDate: Sat Jun 22 11:19:30 2024 +0530[m
+Commit:     aditya-jha13 <jha.aditya2121@gmail.com>[m
+CommitDate: Sat Jun 22 11:19:30 2024 +0530[m
+[m
+    removed![m
+[m
+[33mcommit e006d6087d2ba93ab331ecdaa00a33b60562a76d[m[m
+Author:     aditya-jha13 <jha.aditya2121@gmail.com>[m
+AuthorDate: Sat Jun 22 11:16:46 2024 +0530[m
+Commit:     aditya-jha13 <jha.aditya2121@gmail.com>[m
+CommitDate: Sat Jun 22 11:16:46 2024 +0530[m
+[m
+    to be deleted.[m
+[m
+[33mcommit 12e74a550615eaefed5914b316e13624994dcf2a[m[m
+Author:     aditya-jha13 <jha.aditya2121@gmail.com>[m
+AuthorDate: Sat Jun 22 10:19:43 2024 +0530[m
+Commit:     aditya-jha13 <jha.aditya2121@gmail.com>[m
+CommitDate: Sat Jun 22 10:19:43 2024 +0530[m
+[m
+    First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ gi [Kt status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git remote
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push -h
+usage: git push [<optionsScript started on 2024-06-22 22:32:48+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+(base) aditya@aditya-Aspire-A715-75G:~$ ^C
+(base) aditya@aditya-Aspire-A715-75G:~$ exir[Kt
+exit
+
+Script done on 2024-06-22 22:39:23+05:30 [COMMAND_EXIT_CODE="130"]
+Script started on 2024-06-22 22:40:11+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+(base) aditya@aditya-Aspire-A715-75G:~$ conda deactivae[Kte
+aditya@aditya-Aspire-A715-75G:~$ git [K[K[K[Kcd LearningGit/
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git clone https://github.com/adityajha-ta/LearningGit.git
+Cloning into 'LearningGit'...
+warning: You appear to have cloned an empty repository.
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git remote add origin https://github.com/adityajha-ta/LearningGit.git
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git remote -v
+origin	https://github.com/adityajha-ta/LearningGit.git (fetch)
+origin	https://github.com/adityajha-ta/LearningGit.git (push)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ gedit re[K[KREADME.txt 
+^C
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git fetch origin
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;43H(B[0;7m[ Read 8 lines ](B[m[H(B[0;7m  GNU nano 4.8                /home/aditya/LearningGit/.git/COMMIT_EDITMSG                           [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[3d[39;49m[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch master[7d# Changes to be committed:[8d#       modified:   README.txt[9d#[2d[39m(B[m[?12l[?25h[?25l[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>[?2004l[KAborting commit due to empty commit message.
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a -m 'about to be [K[K[K[K[K[K[K[K[K[K[K[Klast commit before pushing code.'
+[master ae1947c] last commit before pushing code.
+ 1 file changed, 8 insertions(+)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push origin master
+Username for 'https://github.com': aditya-ta
+Password for 'https://aditya-ta@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/adityajha-ta/LearningGit.git/'
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push origin master
+Username for 'https://github.com': aditya-ta
+Password for 'https://aditya-ta@github.com': 
+remote: Permission to adityajha-ta/LearningGit.git denied to adityajha-ta.
+fatal: unable to access 'https://github.com/adityajha-ta/LearningGit.git/': The requested URL returned error: 403
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push origin master
+Username for 'https://github.com': aditya-ta
+Password for 'https://aditya-ta@github.com': 
+Enumerating objects: 12, done.
+Counting objects:   8% (1/12)Counting objects:  16% (2/12)Counting objects:  25% (3/12)Counting objects:  33% (4/12)Counting objects:  41% (5/12)Counting objects:  50% (6/12)Counting objects:  58% (7/12)Counting objects:  66% (8/12)Counting objects:  75% (9/12)Counting objects:  83% (10/12)Counting objects:  91% (11/12)Counting objects: 100% (12/12)Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects:  11% (1/9)Compressing objects:  22% (2/9)Compressing objects:  33% (3/9)Compressing objects:  44% (4/9)Compressing objects:  55% (5/9)Compressing objects:  66% (6/9)Compressing objects:  77% (7/9)Compressing objects:  88% (8/9)Compressing objects: 100% (9/9)Compressing objects: 100% (9/9), done.
+Writing objects:   8% (1/12)Writing objects:  16% (2/12)Writing objects:  25% (3/12)Writing objects:  33% (4/12)Writing objects:  41% (5/12)Writing objects:  50% (6/12)Writing objects:  58% (7/12)Writing objects:  66% (8/12)Writing objects:  83% (10/12)Writing objects:  91% (11/12)Writing objects: 100% (12/12)Writing objects: 100% (12/12), 2.15 KiB | 551.00 KiB/s, done.
+Total 12 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), done.[K
+To https://github.com/adityajha-ta/LearningGit.git
+ * [new branch]      master -> master
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/adityajha-ta/LearningGit.git
+  Push  URL: https://github.com/adityajha-ta/LearningGit.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git r[Kbranch testing
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --oneline --decorst[K[Kate
+[?1h=[33mae1947c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mtesting[m[33m)[m last commit before pushing code.[m
+[33m4f2365e[m removed![m
+[33me006d60[m to be deleted.[m
+[33m12e74a5[m First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo 'new branch' >> test,[K1.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit [K[K[K[K[K[K[Kstatus
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtest1.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ f[Kgit commit -a0[K -, [K[Km 'pushing to new branch'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtest1.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git checo[Kkout testing
+Switched to branch 'testing'
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git checkout testingommit -a -m 'pushing to new branch'
+On branch testing
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtest1.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ gut [K[K[Kit add . \ [K[K[K
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cimm[K[K[Kommit -m 'new branch;[K'
+[testing 7caf231] new branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --oneline --decorate
+[?1h=[33m7caf231[m[33m ([m[1;36mHEAD -> [m[1;32mtesting[m[33m)[m new branch[m
+[33mae1947c[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m last commit before pushing code.[m
+[33m4f2365e[m removed![m
+[33me006d60[m to be deleted.[m
+[33m12e74a5[m First Commit[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git[K[K[Kexit
+exit
+
+Script done on 2024-06-23 02:26:12+05:30 [COMMAND_EXIT_CODE="0"]
+Script started on 2024-06-23 08:20:56+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+(base) aditya@aditya-Aspire-A715-75G:~$ script -a ~/githubsession2exit[Kscript -a ~/githubsession2[Kscript -a ~/githubsession2exit[Kgit log --oneline --decorate[2Pcommit -m 'new branch'add .[Kcommit -a -m 'pushing to new branch'[20Pheckout testingommit -a -m 'pushing to new branch'[20Pheckout testingommit -a -m 'pushing to new branch'add .[Kcommit -m 'new branch'log --oneline --decorateexit[Kscript -a ~/githubsession2[Kgit log --oneline --de o[K[Kcorate
+[?1h=[33maaba142[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mfinal_task2_documentation[m[33m)[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~$ cd LearningGit/
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ cd LearningGit/git log --oneline --decorate
+[?1h=[33m7caf231[m[33m ([m[1;36mHEAD -> [m[1;32mtesting[m[33m)[m new branch[m
+[33mae1947c[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m last commit before pushing code.[m
+[33m4f2365e[m removed![m
+[33me006d60[m to be deleted.[m
+[33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git statis[K[Kus
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git checkout master
+M	README.txt
+Switched to branch 'master'
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git stati[Kus
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git chc[Keckout -b hotfix
+Switched to a new branch 'hotfix'
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch hotfix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo [K[K[K[K[Kecho 'ne [Kw branch for merging'>>merge.txtx[K
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add merge.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m 'new branch'
+[hotfix 34a0691] new branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 merge.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --oneline --decorte[K[Kate
+[?1h=[33m34a0691[m[33m ([m[1;36mHEAD -> [m[1;32mhotfix[m[33m)[m new branch[m
+[33mae1947c[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m last commit before pushing code.[m
+[33m4f2365e[m removed![m
+[33me006d60[m to be deleted.[m
+[33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --oneline --decorate --graph --all
+[?1h=* [33m34a0691[m[33m ([m[1;36mHEAD -> [m[1;32mhotfix[m[33m)[m new branch[m
+[31m|[m * [33m7caf231[m[33m ([m[1;32mtesting[m[33m)[m new branch[m
+[31m|[m[31m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git checkout masyer[K[K[Kter
+M	README.txt
+Switched to branch 'master'
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git merge hotfix
+Updating ae1947c..34a0691
+Fast-forward
+ merge.txt | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+ create mode 100644 merge.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git merge hotfixcheckout masterlog --oneline --decorate --graph --all
+[?1h=* [33m34a0691[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mhotfix[m[33m)[m new branch[m
+[31m|[m * [33m7caf231[m[33m ([m[1;32mtesting[m[33m)[m new branch[m
+[31m|[m[31m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git branch -d hotfix
+Deleted branch hotfix (was 34a0691).
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+merge.txt  README.txt  sess.log  test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git checkout testing
+M	README.txt
+Switched to branch 'testing'
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+README.txt  sess.log  test1.txt  test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ cat test.txt
+version 1
+version 2
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ gedit test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git sttais[K[K[K[Katus
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+	[31mmodified:   test.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add tets[K[Kst.txt 
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cimm[K[K[Kommit -m 'changes to tests[K.txt'
+[testing 83cc929] changes to test.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git chek[Kckout me[K[Kmaster
+M	README.txt
+Switched to branch 'master'
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git merge testing
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;43H(B[0;7m[ Read 6 lines ](B[m[H(B[0;7m  GNU nano 4.8                   /home/aditya/LearningGit/.git/MERGE_MSG                             [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[2d[39;49m(B[mMerge branch 'testing'[3d[36m# Please enter a commit message to explain why this merge is necessary,[4d# especially if it merges an updated upstream into a topic branch.[5d#[6d# Lines starting with '#' will be ignored, and an empty message aborts[7d# the commit.[2d[39m(B[m[?12l[?25h[?25l[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>[?2004l[KMerge made by the 'recursive' strategy.
+ test.txt  | 2 [32m+[m[31m-[m
+ test1.txt | 1 [32m+[m
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 test1.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git merge testingcheckout masterommit -m 'changes to test.txt'[18Padd test.txt [7Pstatusedit test.txt[2Pca[C[C[C[C[C[C[C[C[C[Cls[Kgit checkout testingls[Kgit branch -d hotfixlog --oneline --decorate --graph --all
+[?1h=*   [33md4e04cf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Merge branch 'testing'[m
+[31m|[m[32m\[m  [m
+[31m|[m * [33m83cc929[m[33m ([m[1;32mtesting[m[33m)[m changes to test.txt[m
+[31m|[m * [33m7caf231[m new branch[m
+* [32m|[m [33m34a0691[m new branch[m
+[32m|[m[32m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+merge.txt  README.txt  sess.log  test1.txt  test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ gedit test.txt 
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git revert --hard d4e04cf
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git revert --hard d4e04cf[1Pd4e04cf[1P4e04cf[1Pd4e04cf[1Pd4e04cf[1Pd4e04cf[1Pd4e04cf[1Pd4e04cf
+error: commit d4e04cf2b6087e075dddd2771344e85a26d6b369 is a merge but no -m option was given.
+fatal: revert failed
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git revert d4e04cf[C[C[1@ [1P[C[C d4e04cf- d4e04cfm d4e04cf[C d4e04cf1 d4e04cf[C[C[C[C[C[C[C[C
+Removing test1.txt
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;43H(B[0;7m[ Read 16 lines ](B[m[H(B[0;7m  GNU nano 4.8                /home/aditya/LearningGit/.git/COMMIT_EDITMSG                           [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[2d[39;49m(B[mRevert "Merge branch 'testing'"[4dThis reverts commit d4e04cf2b6087e075dddd2771344e85a26d6b369, reversing[5dchanges made to 34a0691dfa875fc9825bf616befdcbce74478cfc.[7d[36m# Please enter the commit message for your changes. Lines starting[8d# with '#' will be ignored, and an empty message aborts the commit.[9d#[10d# On branch master[11d# Changes to be committed:[12d#       modified:   test.txt[13d#       deleted:    test1.txt[14d#[15d# Changes not staged for commit:[16d#       modified:   README.txt[17d#[2d[39m(B[m[?12l[?25h[?25l[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>[?2004l[K[master ff108ee] Revert "Merge branch 'testing'"
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+ delete mode 100644 test1.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git revert -m 1 d4e04cf[5Pd4e04cf--hard d4e04cf[10Pedit test.txt ls[Kgit log --oneline --decorate --graph --all
+[?1h=* [33mff108ee[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Revert "Merge branch 'testing'"[m
+*   [33md4e04cf[m Merge branch 'testing'[m
+[32m|[m[33m\[m  [m
+[32m|[m * [33m83cc929[m[33m ([m[1;32mtesting[m[33m)[m changes to test.txt[m
+[32m|[m * [33m7caf231[m new branch[m
+* [33m|[m [33m34a0691[m new branch[m
+[33m|[m[33m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+merge.txt  README.txt  sess.log  test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git reset --hard HEAD~1
+HEAD is now at d4e04cf Merge branch 'testing'
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git reset --hard HEAD~1ls[Kgit log --oneline --decorate --graph --all
+[?1h=*   [33md4e04cf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Merge branch 'testing'[m
+[31m|[m[32m\[m  [m
+[31m|[m * [33m83cc929[m[33m ([m[1;32mtesting[m[33m)[m changes to test.txt[m
+[31m|[m * [33m7caf231[m new branch[m
+* [32m|[m [33m34a0691[m new branch[m
+[32m|[m[32m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+merge.txt  README.txt  sess.log  test1.txt  test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ lsgit log --oneline --decorate --graph --all[19Preset --hard HEAD~1
+HEAD is now at 34a0691 new branch
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git reset --hard HEAD~1ls[Kgit log --oneline --decorate --graph --all
+[?1h=* [33m83cc929[m[33m ([m[1;32mtesting[m[33m)[m changes to test.txt[m
+* [33m7caf231[m new branch[m
+[31m|[m * [33m34a0691[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m new branch[m
+[31m|[m[31m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ ls
+merge.txt  README.txt  sess.log  test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ v[Kgedit test.txt 
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add test.txt | git commit [K[K[K[K[K[K[K[K[K[K[K[K[K[K
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m 'new changes to test,[K.txt'
+[master ba46d95] new changes to test.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m 'new changes to test.txt'[23Padd test.txt[1Pedit test.txt ls[Kgit log --oneline --decorate --graph --all
+[?1h=* [33mba46d95[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m new changes to test.txt[m
+* [33m34a0691[m new branch[m
+[31m|[m * [33m83cc929[m[33m ([m[1;32mtesting[m[33m)[m changes to test.txt[m
+[31m|[m * [33m7caf231[m new branch[m
+[31m|[m[31m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git merge test.txt [K[K[K[K[K[Kting
+Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+	[32mnew file:   test1.txt[m
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	[31mboth modified:   test.txt[m
+
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git statusmerge testing[7Pstatus
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+	[32mnew file:   test1.txt[m
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	[31mboth modified:   test.txt[m
+
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -m 'merge resol[K[K[K[K[K[K[K[K[K[K[Kconflict resolved.'
+U	test.txt
+error: Committing is not possible because you have unmerged files.
+[33mhint: Fix them up in the work tree, and then use 'git add/rm <file>'[m
+[33mhint: as appropriate to mark resolution and make a commit.[m
+fatal: Exiting because of an unresolved conflict.
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git sdd[K[K[Kadd test.txt
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git add test.txtcommit -m 'conflict resolved.'
+[master b5fc83c] conflict resolved.
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ [C[30Preverse-i-search)`':[Cg': git commit -m 'conflict resolved.'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[1@t[C[C[C[1@ [C[C[Cl': git log --oneline --decorate --graph --all[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[C[24@base) aditya@aditya-Aspire-A715-75G:~/LearningGit$[C
+[?1h=*   [33mb5fc83c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m conflict resolved.[m
+[31m|[m[32m\[m  [m
+[31m|[m * [33m83cc929[m[33m ([m[1;32mtesting[m[33m)[m changes to test.txt[m
+[31m|[m * [33m7caf231[m new branch[m
+* [32m|[m [33mba46d95[m new changes to test.txt[m
+* [32m|[m [33m34a0691[m new branch[m
+[32m|[m[32m/[m  [m
+* [33mae1947c[m[33m ([m[1;31morigin/master[m[33m)[m last commit before pushing code.[m
+* [33m4f2365e[m removed![m
+* [33me006d60[m to be deleted.[m
+* [33m12e74a5[m First Commit[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git statis[K[Kus
+On branch master
+nothing to commit, working tree clean
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+nothing to commit, working tree clean
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commm[Ki [Kt 0a [K[K[K0a [K[K[Ka[K-a 'commiting [K[K[K[K[K[K[K[K[K[Kupdating readme'
+fatal: paths 'updating readme ...' with -a does not make sense
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a 'updating readme'[C[1@ [1@.
+fatal: paths '. ...' with -a does not make sense
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a . 'updating readme'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;43H(B[0;7m[ Read 8 lines ](B[m[H(B[0;7m  GNU nano 4.8                /home/aditya/LearningGit/.git/COMMIT_EDITMSG                           [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[3d[39;49m[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch master[7d# Changes to be committed:[8d#       modified:   README.txt[9d#[2d[39m(B[m[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[2du[?12l[?25h[?25lp[?12l[?25h[?25ld[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25lg[?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l[53d(B[0;7mSave modified buffer?                                                                                [54;1H Y(B[m Yes[K[55d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[53;23H[?12l[?25h[?25l[54d(B[0;7m^G(B[m Get Help[54;26H(B[0;7mM-D(B[m DOS Format[54;51H(B[0;7mM-A(B[m Append[54;76H(B[0;7mM-B(B[m Backup File[55d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[55;51H(B[0;7mM-P(B[m Prepend[55;76H(B[0;7m^T(B[m To Files[53d(B[0;7mFile Name to Write: /home/aditya/LearningGit/.git/COMMIT_EDITMSG(B[m[53;65H[?12l[?25h[?25l[53;65H[?12l[?25h[?25l[53;65H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 8 lines ](B[m[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>[?2004l[K[master ba401b7] updating readme
+ 1 file changed, 26 insertions(+), 8 deletions(-)
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git branch -v
+[?1h=* [32mmaster [m ba401b7 updating readme[m
+  testing[m 83cc929 changes to test.txt[m
+[K[?1l>(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git [K[K[K[Kgit puh [K[Ksh pr[K[Korigin master
+^C
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push origin master
+
+vb  ^^C^C
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git remote -v
+origin	https://github.com/adityajha-ta/LearningGit.git (fetch)
+origin	https://github.com/adityajha-ta/LearningGit.git (push)
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git p[Kfetch 
+^C
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git commit -a
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;43H(B[0;7m[ Read 8 lines ](B[m[H(B[0;7m  GNU nano 4.8                /home/aditya/LearningGit/.git/COMMIT_EDITMSG                           [1;100H(B[m[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo[53d[3d[39;49m[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch master[7d# Changes to be committed:[8d#       modified:   README.txt[9d#[2d[39m(B[m[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[2df[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25ll[?12l[?25h[?25l[53d(B[0;7mSave modified buffer?                                                                                [54;1H Y(B[m Yes[K[55d(B[0;7m N(B[m No  [15G  (B[0;7m^C(B[m Cancel[K[53;23H[?12l[?25h[?25l[54d(B[0;7m^G(B[m Get Help[54;26H(B[0;7mM-D(B[m DOS Format[54;51H(B[0;7mM-A(B[m Append[54;76H(B[0;7mM-B(B[m Backup File[55d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-M(B[m Mac Format[55;51H(B[0;7mM-P(B[m Prepend[55;76H(B[0;7m^T(B[m To Files[53d(B[0;7mFile Name to Write: /home/aditya/LearningGit/.git/COMMIT_EDITMSG(B[m[53;65H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 8 lines ](B[m[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t[?1l>[?2004l[K[master 99aee0f] final
+ 1 file changed, 16 insertions(+)
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push origin master
+Username for 'https://github.com': aditya-ta
+Password for 'https://aditya-ta@github.com': 
+Enumerating objects: 23, done.
+Counting objects:   4% (1/23)Counting objects:   8% (2/23)Counting objects:  13% (3/23)Counting objects:  17% (4/23)Counting objects:  21% (5/23)Counting objects:  26% (6/23)Counting objects:  30% (7/23)Counting objects:  34% (8/23)Counting objects:  39% (9/23)Counting objects:  43% (10/23)Counting objects:  47% (11/23)Counting objects:  52% (12/23)Counting objects:  56% (13/23)Counting objects:  60% (14/23)Counting objects:  65% (15/23)Counting objects:  69% (16/23)Counting objects:  73% (17/23)Counting objects:  78% (18/23)Counting objects:  82% (19/23)Counting objects:  86% (20/23)Counting objects:  91% (21/23)Counting objects:  95% (22/23)Counting objects: 100% (23/23)Counting objects: 100% (23/23), done.
+Delta compression using up to 8 threads
+Compressing objects:   6% (1/16)Compressing objects:  12% (2/16)Compressing objects:  18% (3/16)Compressing objects:  25% (4/16)Compressing objects:  31% (5/16)Compressing objects:  37% (6/16)Compressing objects:  43% (7/16)Compressing objects:  50% (8/16)Compressing objects:  56% (9/16)Compressing objects:  62% (10/16)Compressing objects:  68% (11/16)Compressing objects:  75% (12/16)Compressing objects:  81% (13/16)Compressing objects:  87% (14/16)Compressing objects:  93% (15/16)Compressing objects: 100% (16/16)Compressing objects: 100% (16/16), done.
+Writing objects:   5% (1/20)Writing objects:  10% (2/20)Writing objects:  15% (3/20)Writing objects:  20% (4/20)Writing objects:  25% (5/20)Writing objects:  30% (6/20)Writing objects:  35% (7/20)Writing objects:  40% (8/20)Writing objects:  45% (9/20)Writing objects:  50% (10/20)Writing objects:  55% (11/20)Writing objects:  60% (12/20)Writing objects:  65% (13/20)Writing objects:  70% (14/20)Writing objects:  75% (15/20)Writing objects:  80% (16/20)Writing objects:  85% (17/20)Writing objects:  90% (18/20)Writing objects:  95% (19/20)Writing objects: 100% (20/20)Writing objects: 100% (20/20), 2.68 KiB | 391.00 KiB/s, done.
+Total 20 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/8)[Kremote: Resolving deltas:  12% (1/8)[Kremote: Resolving deltas:  25% (2/8)[Kremote: Resolving deltas:  37% (3/8)[Kremote: Resolving deltas:  50% (4/8)[Kremote: Resolving deltas:  62% (5/8)[Kremote: Resolving deltas:  75% (6/8)[Kremote: Resolving deltas:  87% (7/8)[Kremote: Resolving deltas: 100% (8/8)[Kremote: Resolving deltas: 100% (8/8), completed with 1 local object.[K
+To https://github.com/adityajha-ta/LearningGit.git
+   ae1947c..99aee0f  master -> master
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git push origin testing
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'testing' on GitHub by visiting:[K
+remote:      https://github.com/adityajha-ta/LearningGit/pull/new/testing[K
+remote: 
+To https://github.com/adityajha-ta/LearningGit.git
+ * [new branch]      testing -> testing
+(base) aditya@aditya-Aspire-A715-75G:~/LearningGit$ [C[30Preverse-i-search)`':[Cg': git push origin testing[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': for datafile in NENE*A.txt NENE*B.txt; do echo $datafile; bash goostats.sh $datafile stats-$datafile; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': for datafile in NENE*A.txt NENE*B.txt; do echo $datafile; bash goostats.sh $dat[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[35Pi': for x in *.dat; do cp $x original-$x; done
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct': git clone https://github.com/aditya-jha13/bayesian-ab-testing.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[C[8@failed reverse-i-search)`git l[C[C[C[1@o[C[C[Cg': git clone https://github.com/aditya-jha13/bayesian-ab-testing.git [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[6Preverse-i-search)`git ': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[1P[C[C[C[1P[C[C[C[C[6@failed reverse-i-search)`[C[C[C[C[6Preverse-i-search)`g[C[C[C[1@i[C[C[C[1@t[C[C[C[1@ [C[C[C[Cfailed reverse-i-search)`git l': git clone https://github.com/nishi1612/Modelling-and-Simulation.git [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulatio[1Pn.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulation[1P.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulation.[1Pgit[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulation.g[1Pit[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulation.gi[1Pt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulation.git[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C': git clone https://github.com/nishi1612/Modelling-and-Simulation.git [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creverse-i-search)`git ': git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers.git[A': git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-B[1Payesian-Methods-for-Hackers.git[A': git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Ba[1Pyesian-Methods-for-Hackers.git[A': git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bay[1Pesian-Methods-for-Hackers.git[A[Cfailed reverse-i-search)`': git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers.git[A[Cbase) aditya@aditya-Aspire-A715-75G:~/LearningGit$ git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit loh[Kg 
+[?1h=[33mcommit 99aee0fa228a73fd7e6b348a1133dcceec2ad8d8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sun Jun 23 12:12:56 2024 +0530[m
+[m
+    final[m
+[m
+[33mcommit ba401b74989a29bd9eebb76c9843eb7edcbe50f4[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sun Jun 23 09:43:41 2024 +0530[m
+[m
+    updating readme[m
+[m
+[33mcommit b5fc83ceb48630daa1f1606f75f9aafde5998d1f[m[m
+Merge: ba46d95 83cc929[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sun Jun 23 09:14:47 2024 +0530[m
+[m
+    conflict resolved.[m
+[m
+[33mcommit ba46d95db274a3b1043a05ba12fd8b5a4851b96c[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sun Jun 23 09:07:42 2024 +0530[m
+[m
+    new changes to test.txt[m
+[m
+[33mcommit 83cc9295c4c063eeb5fd572731fc8cf1c2a0fbd2[m[33m ([m[1;31morigin/testing[m[33m, [m[1;32mtesting[m[33m)[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sun Jun 23 08:45:02 2024 +0530[m
+[m
+    changes to test.txt[m
+[m
+[33mcommit 34a0691dfa875fc9825bf616befdcbce74478cfc[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sun Jun 23 08:32:19 2024 +0530[m
+[m
+    new branch[m
+[m
+[33mcommit 7caf23158fed6f1bafd434bc6545b3812f5f228b[m[m
+Author: aditya-jh

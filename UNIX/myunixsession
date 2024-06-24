@@ -1,0 +1,1492 @@
+Script started on 2024-06-17 22:04:34+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+(base) aditya@aditya-Aspire-A715-75G:~$ conda deactivate
+aditya@aditya-Aspire-A715-75G:~$ ls
+ alberta
+ bayesian-ab-testing
+ catkin_ws
+ cuda_ws
+ Derivative-Modelling---JPMC-Quant-Challenge-2022
+ Desktop
+ Documents
+ Downloads
+ f1tenth_agv
+ f1tenth-riders-quickstart
+'github key'
+'github PUSHES'
+ imdb_dataAnalysis
+ informed-rrt-star
+ informed-rrt-star.zip
+ jpmc-quant-challenge
+ miniconda3
+ Modelling-and-Simulation
+ Model-Predictive-Control-Carla
+ Music
+ myunixsession
+ navigation
+ nomura_challenge
+ opencv-4.x
+ opencv.zip
+ Pictures
+ pms
+ pms.zip
+ Probabilistic-Programming-and-Bayesian-Methods-for-Hackers
+ Public
+ robot_ws
+ score-based-tutorial
+ screenshots
+ snap
+ SQL
+ Templates
+ Webcam
+aditya@aditya-Aspire-A715-75G:~$ pwd
+/home/aditya
+aditya@aditya-Aspire-A715-75G:~$ cd ..
+aditya@aditya-Aspire-A715-75G:/home$ ls
+aditya
+aditya@aditya-Aspire-A715-75G:/home$ ls -F
+aditya/
+aditya@aditya-Aspire-A715-75G:/home$ ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by modification time, newest first
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation at: <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+aditya@aditya-Aspire-A715-75G:/home$ ls -F Des[K[K[K[K[K[K[K[K[Kcd aditya/
+aditya@aditya-Aspire-A715-75G:~$ ls -F Desktop
+ portfolio.jpeg
+'Screenshot from 2024-01-24 05-18-21.png'
+'Screenshot from 2024-01-24 05-19-32.png'
+'Screenshot from 2024-04-02 15-09-16.png'
+aditya@aditya-Aspire-A715-75G:~$ ls _[K-F ./shell-lesson-data/
+exercise-data/	north-pacific-gyre/
+aditya@aditya-Aspire-A715-75G:~$ cd shell-lesson-data/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls -F
+exercise-data/	north-pacific-gyre/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ 
+[Kaditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls -F ./exercise-data/
+alkanes/  animal-counts/  creatures/  numbers.txt  writing/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls -F -a
+./  ../  exercise-data/  north-pacific-gyre/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls -s exercise-data/
+total 20
+4 alkanes  4 animal-counts  4 creatures  4 numbers.txt	4 writing
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls north-pacific-gyre/
+goodiff.sh      NENE01736A.txt  NENE01843A.txt  NENE01978B.txt  NENE02040Z.txt  
+goostats.sh     NENE01751A.txt  NENE01843B.txt  NENE02018B.txt  NENE02043A.txt  
+NENE01729A.txt  NENE01751B.txt  NENE01971Z.txt  NENE02040A.txt  NENE02043B.txt  
+NENE01729B.txt  NENE01812A.txt  NENE01978A.txt  NENE02040B.txt  
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls north-pacific-gyre/goo
+ls: cannot access 'north-pacific-gyre/goo': No such file or directory
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls north-pacific-gyre/goo
+goodiff.sh   goostats.sh  
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data$ ls north-pacific-gyre/goo[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcs [K[Kd exercise-data/writing/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls
+haiku.txt  LittleWomen.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ md[Kkdit [K[Kr yh[K[Kthesis
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls -F
+haiku.txt  LittleWomen.txt  thesis/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ mkdirm[K -p[K[K-p ../project/data ../ 
+project/results
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls -FR ../project/
+../project/:
+data/  results/
+
+../project/data:
+
+../project/results:
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ cd y[Kthesis
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing/thesis$ nano draft.txt
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;45H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                  draft.txt                                            [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d[39;49m(B[m[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m
+[2di[?12l[?25h[?25lt[?12l[?25h[?25l'[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25ln[?12l[?25h[?25lo[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25l"[?12l[?25h[?25lp[?12l[?25h[?25lu[?12l[?25h[?25lb[?12l[?25h[?25ll[?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25l [?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25l [?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25ls[?12l[?25h[?25li
+[53d[K[2;27H[?12l[?25h[?25lh[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25l"[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25ly[?12l[?25h[?25l [?12l[?25h[?25lm[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25l,[?12l[?25h[?25l
+[3d[?12l[?25h[?25li[?12l[?25h[?25lt[?12l[?25h[?25l'[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25l"[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25la[?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25lr[?12l[?25h[?25li[?12l[?25h[?25lv[?12l[?25h[?25le[?12l[?25h[?25l"[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: draft.txt                                                                        [53;1H(B[m[53;30H[?12l[?25h[?25l
+[53;30H[?12l[?25h[?25l
+[53;30H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 2 lines ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[3;24H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing/thesis$ ls
+draft.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing/thesis$ touch my_file.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing/thesis$ rm my_file.txt 
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing/thesis$ cd ..
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ mv thesis/draft.txt n\[K[Kthdo[K[Kesis/q 
+uotes.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls thesis
+quotes.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ vc [K[K[Kmv thesis/quotes.txt .
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls thesis/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ cp quotes.txt thesos[K[Kis/quotati 
+ons.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls thesis
+quotations.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ pc [K[K[Kcp -p [K[Kr the[K[K[K--hep[Klp
+Usage: cp [OPTION]... [-T] SOURCE DEST
+  or:  cp [OPTION]... SOURCE... DIRECTORY
+  or:  cp [OPTION]... -t DIRECTORY SOURCE...
+Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --archive                same as -dR --preserve=all
+      --attributes-only        don't copy the file data, just the attributes
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+      --copy-contents          copy contents of special files when recursive
+  -d                           same as --no-dereference --preserve=links
+  -f, --force                  if an existing destination file cannot be
+                                 opened, remove it and try again (this option
+                                 is ignored when the -n option is also used)
+  -i, --interactive            prompt before overwrite (overrides a previous -n
+                                  option)
+  -H                           follow command-line symbolic links in SOURCE
+  -l, --link                   hard link files instead of copying
+  -L, --dereference            always follow symbolic links in SOURCE
+  -n, --no-clobber             do not overwrite an existing file (overrides
+                                 a previous -i option)
+  -P, --no-dereference         never follow symbolic links in SOURCE
+  -p                           same as --preserve=mode,ownership,timestamps
+      --preserve[=ATTR_LIST]   preserve the specified attributes (default:
+                                 mode,ownership,timestamps), if possible
+                                 additional attributes: context, links, xattr,
+                                 all
+      --no-preserve=ATTR_LIST  don't preserve the specified attributes
+      --parents                use full source file name under DIRECTORY
+  -R, -r, --recursive          copy directories recursively
+      --reflink[=WHEN]         control clone/CoW copies. See below
+      --remove-destination     remove each existing destination file before
+                                 attempting to open it (contrast with --force)
+      --sparse=WHEN            control creation of sparse files. See below
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -s, --symbolic-link          make symbolic links instead of copying
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 copy only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -x, --one-file-system        stay on this file system
+  -Z                           set SELinux security context of destination
+                                 file to default type
+      --context[=CTX]          like -Z, or if CTX is specified then set the
+                                 SELinux or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+By default, sparse SOURCE files are detected by a crude heuristic and the
+corresponding DEST file is made sparse as well.  That is the behavior
+selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST
+file whenever the SOURCE file contains a long enough sequence of zero bytes.
+Use --sparse=never to inhibit creation of sparse files.
+
+When --reflink[=always] is specified, perform a lightweight copy, where the
+data blocks are copied only when modified.  If this is not possible the copy
+fails, or if --reflink=auto is specified, fall back to a standard copy.
+Use --reflink=never to ensure a standard copy is performed.
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+As a special case, cp makes a backup of SOURCE when the force and backup
+options are given and SOURCE and DEST are the same name for an existing,
+regular file.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation at: <https://www.gnu.org/software/coreutils/cp>
+or available locally via: info '(coreutils) cp invocation'
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ cp -r thesis thesis_backup
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls thesis thesis_backup/
+thesis:
+quotations.txt
+
+thesis_backup/:
+quotations.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ rm quotes.txt 
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ rm -r -i thesos[K[Kis
+rm: descend into directory 'thesis'? y
+rm: remove regular file 'thesis/quotations.txt'? y
+rm: remove directory 'thesis'? y
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ ls ../alkanes
+cubane.pdb  ethane.pdb	methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ wc cubane /[K[K.pdb
+wc: cubane.pdb: No such file or directory
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ cd ../alkanes
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ wc cubanrs[K[Kes/[K.pdb
+wc: cubanes.pdb: No such file or directory
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ ls
+cubane.pdb  ethane.pdb	methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ wc cubane/[K.pdb
+  20  156 1158 cubane.pdb
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ wc *.pdb
+  20  156 1158 cubane.pdb
+  12   84  622 ethane.pdb
+   9   57  422 methane.pdb
+  30  246 1828 octane.pdb
+  21  165 1226 pentane.pdb
+  15  111  825 propane.pdb
+ 107  819 6081 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ wc -l *.pdb > lengths/[K.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ cat lengths.txt
+  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ sort -n lengths.txt 
+   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ sort -n lengths.txt 
+   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ 
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ sort -n lengths.txt > sorted 
+-length.ts[Kxt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ head -n 5 sorted-length.txt  
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K 
+   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ wc -l *.pdb | sort -n | head 
+ -n 5
+   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ ls
+cubane.pdb  lengths.txt  octane.pdb   propane.pdb
+ethane.pdb  methane.pdb  pentane.pdb  sorted-length.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ cd ../nor[K[K[K../north-pacific-gyre/ 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ wc l[K=[K-l 8[K*.T[Ktxt
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+  300 NENE01751B.txt
+  300 NENE01812A.txt
+  300 NENE01843A.txt
+  300 NENE01843B.txt
+  300 NENE01971Z.txt
+  300 NENE01978A.txt
+  300 NENE01978B.txt
+  240 NENE02018B.txt
+  300 NENE02040A.txt
+  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ wc -l *.txt  \[K[K \ [K[K[K \[K[K| head -n 5
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+  300 NENE01751B.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ wc -l *.txt | head -n 5[C[1@ [1@s[1@o[1@r[1@t[C[1@ [1@-n head -n 5 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| head -n 5[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+  240 NENE02018B.txt
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ wc -l *.txt | sort -n| head -n 5
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -n 5 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1@t[1@ai -n 5 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl -n 5[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ cd ../exercise-data/creatures/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ ls
+basilisk.dat  minotaur.dat  unicorn.dat
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ head -n 5 basilisk.dat 
+basilisk.dat  minotaur.dat  unicorn.dat   
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ head -n 5 basilisk.dat minotaur.dat unicorn.dat 
+==> basilisk.dat <==
+COMMON NAME: basilisk
+CLASSIFICATION: basiliscus vulgaris
+UPDATED: 1745-05-02
+CCCCAACGAG
+GAAACAGATC
+
+==> minotaur.dat <==
+COMMON NAME: minotaur
+CLASSIFICATION: bos hominus
+UPDATED: 1765-02-17
+CCCGAAGGAC
+CGACATCTCT
+
+==> unicorn.dat <==
+COMMON NAME: unicorn
+CLASSIFICATION: equus monoceros
+UPDATED: 1738-11-24
+AGCCGGGTCG
+CTTTACCTTA
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ tail -n 1 basilisk.dat minotaur.dat unicorn.dat 
+==> basilisk.dat <==
+CGCGCCCACC
+
+==> minotaur.dat <==
+GCCTTCACGG
+
+==> unicorn.dat <==
+CGCGCCCACC
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ for fi;e[K[Klea[K[K[K[K in basilisk.dat minotaur.dat unicorn.dat 
+> do
+> 
+Display all 3159 possibilities? (y or n)
+>  [Kecho $f
+> head -n 2 $f | tsil[K[K[Kail -n 1
+> done
+basilisk.dat
+CLASSIFICATION: basiliscus vulgaris
+minotaur.dat
+CLASSIFICATION: bos hominus
+unicorn.dat
+CLASSIFICATION: equus monoceros
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ for d in *.pdb4[K
+> do
+> ls *.pdb
+> done
+ls: cannot access '*.pdb': No such file or directory
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ cd ../../al[K[Kexercise-data/alkanes/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ for d i [Kn *.pdb
+> do
+> cat $data[K[K[K>>all.pdnb[K[Kb
+> done
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ ls [K[K[Kcar[Kt all.pdb
+COMPND      CUBANE
+AUTHOR      DAVE WOODCOCK  95 12 06
+ATOM      1  C           1       0.789  -0.852   0.504  1.00  0.00
+ATOM      2  C           1      -0.161  -1.104  -0.624  1.00  0.00
+ATOM      3  C           1      -1.262  -0.440   0.160  1.00  0.00
+ATOM      4  C           1      -0.289  -0.202   1.284  1.00  0.00
+ATOM      5  C           1       1.203   0.513  -0.094  1.00  0.00
+ATOM      6  C           1       0.099   1.184   0.694  1.00  0.00
+ATOM      7  C           1      -0.885   0.959  -0.460  1.00  0.00
+ATOM      8  C           1       0.236   0.283  -1.269  1.00  0.00
+ATOM      9  H           1       1.410  -1.631   0.942  1.00  0.00
+ATOM     10  H           1      -0.262  -2.112  -1.024  1.00  0.00
+ATOM     11  H           1      -2.224  -0.925   0.328  1.00  0.00
+ATOM     12  H           1      -0.468  -0.501   2.315  1.00  0.00
+ATOM     13  H           1       2.224   0.892  -0.134  1.00  0.00
+ATOM     14  H           1       0.240   2.112   1.251  1.00  0.00
+ATOM     15  H           1      -1.565   1.730  -0.831  1.00  0.00
+ATOM     16  H           1       0.472   0.494  -2.315  1.00  0.00
+TER      17              1
+END
+COMPND      ETHANE
+AUTHOR      DAVE WOODCOCK  95 12 18
+ATOM      1  C           1      -0.752   0.001  -0.141  1.00  0.00
+ATOM      2  C           1       0.752  -0.001   0.141  1.00  0.00
+ATOM      3  H           1      -1.158   0.991   0.070  1.00  0.00
+ATOM      4  H           1      -1.240  -0.737   0.496  1.00  0.00
+ATOM      5  H           1      -0.924  -0.249  -1.188  1.00  0.00
+ATOM      6  H           1       1.158  -0.991  -0.070  1.00  0.00
+ATOM      7  H           1       0.924   0.249   1.188  1.00  0.00
+ATOM      8  H           1       1.240   0.737  -0.496  1.00  0.00
+TER       9              1
+END
+COMPND      METHANE
+AUTHOR      DAVE WOODCOCK  95 12 18
+ATOM      1  C           1       0.257  -0.363   0.000  1.00  0.00
+ATOM      2  H           1       0.257   0.727   0.000  1.00  0.00
+ATOM      3  H           1       0.771  -0.727   0.890  1.00  0.00
+ATOM      4  H           1       0.771  -0.727  -0.890  1.00  0.00
+ATOM      5  H           1      -0.771  -0.727   0.000  1.00  0.00
+TER       6              1
+END
+COMPND      OCTANE
+AUTHOR      DAVE WOODCOCK  96 01 05
+ATOM      1  C           1      -4.397   0.370  -0.255  1.00  0.00
+ATOM      2  C           1      -3.113  -0.447  -0.421  1.00  0.00
+ATOM      3  C           1      -1.896   0.386  -0.007  1.00  0.00
+ATOM      4  C           1      -0.611  -0.426  -0.198  1.00  0.00
+ATOM      5  C           1       0.608   0.405   0.216  1.00  0.00
+ATOM      6  C           1       1.892  -0.400   0.001  1.00  0.00
+ATOM      7  C           1       3.113   0.429   0.414  1.00  0.00
+ATOM      8  C           1       4.397  -0.374   0.199  1.00  0.00
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+ATOM     14  H           1      -1.992   0.668   1.044  1.00  0.00
+ATOM     15  H           1      -1.849   1.286  -0.621  1.00  0.00
+ATOM     16  H           1      -0.515  -0.707  -1.248  1.00  0.00
+ATOM     17  H           1      -0.659  -1.326   0.417  1.00  0.00
+ATOM     18  H           1       0.520   0.671   1.270  1.00  0.00
+ATOM     19  H           1       0.645   1.314  -0.386  1.00  0.00
+ATOM     20  H           1       1.979  -0.666  -1.054  1.00  0.00
+ATOM     21  H           1       1.855  -1.309   0.604  1.00  0.00
+ATOM     22  H           1       3.030   0.696   1.467  1.00  0.00
+ATOM     23  H           1       3.155   1.337  -0.188  1.00  0.00
+ATOM     24  H           1       4.493  -0.641  -0.854  1.00  0.00
+ATOM     25  H           1       4.368  -1.282   0.801  1.00  0.00
+ATOM     26  H           1       5.254   0.230   0.498  1.00  0.00
+TER      27              1
+END
+COMPND      PENTANE
+AUTHOR      DAVE WOODCOCK  95 12 18
+ATOM      1  C           1       2.484  -0.389   0.322  1.00  0.00
+ATOM      2  C           1       1.261   0.350  -0.243  1.00  0.00
+ATOM      3  C           1      -0.027  -0.348   0.199  1.00  0.00
+ATOM      4  C           1      -1.249   0.421  -0.326  1.00  0.00
+ATOM      5  C           1      -2.536  -0.311   0.047  1.00  0.00
+ATOM      6  H           1       2.471  -1.420  -0.033  1.00  0.00
+ATOM      7  H           1       2.443  -0.371   1.412  1.00  0.00
+ATOM      8  H           1       3.393   0.112  -0.016  1.00  0.00
+ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
+ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
+ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
+ATOM     12  H           1      -0.048  -1.362  -0.205  1.00  0.00
+ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00
+ATOM     14  H           1      -1.259   1.420   0.112  1.00  0.00
+ATOM     15  H           1      -2.608  -0.407   1.130  1.00  0.00
+ATOM     16  H           1      -2.540  -1.303  -0.404  1.00  0.00
+ATOM     17  H           1      -3.393   0.254  -0.321  1.00  0.00
+TER      18              1
+END
+COMPND      PROPANE
+AUTHOR      DAVE WOODCOCK  95  12 18
+ATOM      1  C           1       1.241   0.444   0.349  1.00  0.00
+ATOM      2  C           1      -0.011  -0.441   0.333  1.00  0.00
+ATOM      3  C           1      -1.176   0.296  -0.332  1.00  0.00
+ATOM      4  H           1       1.516   0.699  -0.675  1.00  0.00
+ATOM      5  H           1       2.058  -0.099   0.827  1.00  0.00
+ATOM      6  H           1       1.035   1.354   0.913  1.00  0.00
+ATOM      7  H           1      -0.283  -0.691   1.359  1.00  0.00
+ATOM      8  H           1       0.204  -1.354  -0.225  1.00  0.00
+ATOM      9  H           1      -0.914   0.551  -1.359  1.00  0.00
+ATOM     10  H           1      -1.396   1.211   0.219  1.00  0.00
+ATOM     11  H           1      -2.058  -0.345  -0.332  1.00  0.00
+TER      12              1
+END
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ cd ../..[K[Ke[Kcreatures/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ for f i[K[K[Kc [K[Kx 9[Kin *.dat
+> do
+> $x
+> head -n 100 $x|tail -n 20
+> done
+basilisk.dat: command not found
+CGGTACCGAA
+AAGGGTCGCG
+CAAGTGTTCC
+CGGGACAATA
+GTTCTGCTAA
+GATAAGTATG
+TGCCGACTTA
+CCCGACCGTC
+TAGGTTATAA
+GGCACAACCG
+CTTCACTGTA
+GAGGTGTACA
+AGGATCCGTT
+GCGCGGGCGG
+CAGTCTATGT
+TTTTCGACAC
+TGGACTGCTT
+CCCTTTGAGG
+GTGGATTTTT
+CGTAACGGGT
+minotaur.dat: command not found
+GGTTGGACCG
+AGTGAACGAA
+GCGATTGATG
+CCCAGTATTG
+GTTTCGGGTC
+CCACCAGGAA
+CAATGTTGGA
+CTTTAGCACG
+ACAGGAATCA
+ATCGTTTCGT
+AATGGTGGCA
+CTTTGGGGTT
+GCAGGCCCGC
+CTGTGCCTTC
+AACGGTCGGC
+AAATAGGACA
+GAGATTTCCT
+GCCTCAAACA
+TCGCAAGACG
+ATTTATCCGG
+unicorn.dat: command not found
+CGGTACCGAA
+AAGGGTCGCG
+CAAGTGTTCC
+CGGGACAATA
+GTTCTGCTAA
+GATAAGTATG
+TGCCGACTTA
+CCCGACCGTC
+TAGGTTATAA
+GGCACAACCG
+CTTCACTGTA
+GAGGTGTACA
+AGGATCCGTT
+GCGCGGGCGG
+CAGTCTATGT
+TTTTCGACAC
+TGGACTGCTT
+CCCTTTGAGG
+GTGGATTTTT
+CGTAACGGGT
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ for x in *.dat
+> do
+> cp $x original-$x
+> done
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/creatures$ cd ./[K./nort[K[K[K[K.//[K[K[K../north-pacific-gyre/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ for datafile i[K[K[K[K[K[K[K[K[K[Kc[K[K x in NENE*.txt NENE*.txt
+> do
+> echo $da[K[Kc[Kx stats-$x
+> dp[Kp[Kone
+NENE01729A.txt stats-NENE01729A.txt
+NENE01729B.txt stats-NENE01729B.txt
+NENE01736A.txt stats-NENE01736A.txt
+NENE01751A.txt stats-NENE01751A.txt
+NENE01751B.txt stats-NENE01751B.txt
+NENE01812A.txt stats-NENE01812A.txt
+NENE01843A.txt stats-NENE01843A.txt
+NENE01843B.txt stats-NENE01843B.txt
+NENE01971Z.txt stats-NENE01971Z.txt
+NENE01978A.txt stats-NENE01978A.txt
+NENE01978B.txt stats-NENE01978B.txt
+NENE02018B.txt stats-NENE02018B.txt
+NENE02040A.txt stats-NENE02040A.txt
+NENE02040B.txt stats-NENE02040B.txt
+NENE02040Z.txt stats-NENE02040Z.txt
+NENE02043A.txt stats-NENE02043A.txt
+NENE02043B.txt stats-NENE02043B.txt
+NENE01729A.txt stats-NENE01729A.txt
+NENE01729B.txt stats-NENE01729B.txt
+NENE01736A.txt stats-NENE01736A.txt
+NENE01751A.txt stats-NENE01751A.txt
+NENE01751B.txt stats-NENE01751B.txt
+NENE01812A.txt stats-NENE01812A.txt
+NENE01843A.txt stats-NENE01843A.txt
+NENE01843B.txt stats-NENE01843B.txt
+NENE01971Z.txt stats-NENE01971Z.txt
+NENE01978A.txt stats-NENE01978A.txt
+NENE01978B.txt stats-NENE01978B.txt
+NENE02018B.txt stats-NENE02018B.txt
+NENE02040A.txt stats-NENE02040A.txt
+NENE02040B.txt stats-NENE02040B.txt
+NENE02040Z.txt stats-NENE02040Z.txt
+NENE02043A.txt stats-NENE02043A.txt
+NENE02043B.txt stats-NENE02043B.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ for x in NENE*.txt NENE*.txt; do echo $x stats-$x; done
+[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@b[1@a[1@s[1@h[C[1@ [1@g[1@o[1@o[1@s[7@tats.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+^C
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ for x in NENE*.txt NENE*.txt; do bash goostats.sh $x stats-$x; done
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C d[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd [1@d
+[1@o[C[1@ [1@e[1@c[1@h[1@o[C[1@ [1@$[1@x[1@;
+bash: syntax error near unexpected token `do'
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ for x in NENE*.txt NENE*.txt; do echo $x; do bash goostats.sh $x stats-$x; done[1P[1P[1P[1P[1P[1P[1P[1P
+[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; d[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd; [1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co;[1@ 
+[1@ [1@e[1@c[1@h[1@o[1@ [1@$[1@x
+bash: syntax error near unexpected token `do'
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile;
+> bash goostats.sh $datafile stats-$datafile; done
+NENE01729A.txt
+NENE01736A.txt
+NENE01751A.txt
+NENE01812A.txt
+NENE01843A.txt
+NENE01978A.txt
+NENE02040A.txt
+NENE02043A.txt
+NENE01729B.txt
+NENE01751B.txt
+NENE01843B.txt
+NENE01978B.txt
+NENE02018B.txt
+NENE02040B.txt
+NENE02043B.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ 
+(reverse-i-search)`': [Ku': cd ../creatures/
+[C[6@failed reverse-i-search)`[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ history
+   79  git commit -m "Restructuring"
+   80  git push
+   81  git pull
+   82  git add .
+   83  git commit -m "Images added"
+   84  git push
+   85  htop
+   86  git pull
+   87  git add .
+   88  git commit -m "Images added"
+   89  git push
+   90  roslaunch husky_viz view_robot.launch 
+   91  roslaunch husky_gazebo husky_playpen.launch 
+   92  cd catkin_ws/
+   93  clear
+   94  catkin_make
+   95  roslaunch husky_gazebo husky_playpen.launch 
+   96  /bin/python3 /home/aditya/pms/codes/ques2.py
+   97  /bin/python3 /home/aditya/pms/codes/ques6.py
+   98  /bin/python3 /home/aditya/pms/codes/ques4.py
+   99  /bin/python3 /home/aditya/pms/codes/ques7.py
+  100  /bin/python3 /home/aditya/pms/codes/ques7.py
+  101  /bin/python3 /home/aditya/pms/codes/ques7.py
+  102  /bin/python3 /home/aditya/pms/codes/ques3.py
+  103  /bin/python3 /home/aditya/pms/codes/ques5.py
+  104  code .
+  105  roslaunch husky_gazebo husky_playpen.launch
+  106  roslaunch husky_gazebo husky_playpen.launch
+  107  roslaunch husky_gazebo husky_playpen.launch
+  108  roslaunch husky_gazebo husky_playpen.launch
+  109  roslaunch husky_gazebo husky_playpen.launch
+  110  cd src
+  111  git clone https://github.com/Tinker-Twins/Husky.git
+  112  cd ..
+  113  catkin_make
+  114  cd catkin_ws
+  115  roslaunch husky_gazebo husky_playpen.launch
+  116  roslaunch husky_gazebo husky_playpen.launch
+  117  roslaunch husky_gazebo husky_playpen.launch
+  118  roslaunch husky_gazebo husky_playpen.launch
+  119  roslaunch husky_gazebo husky_playpen.launch
+  120  roslaunch husky_gazebo husky_playpen.launch
+  121  roslaunch husky_gazebo husky_playpen.launch
+  122  roslaunch husky_gazebo husky_playpen.launch
+  123  roslaunch husky_gazebo husky_playpen.launch
+  124  roslaunch husky_gazebo husky_playpen.launch
+  125  htop
+  126  roslaunch husky_viz view_robot.launch
+  127  roslaunch husky_viz view_robot.launch
+  128  rostopic list
+  129  rostopic echo /toExplore
+  130  rostopic echo /toExplore
+  131  rostopic echo /toExplore
+  132  rostopic echo /toExplore
+  133  clear
+  134  rostopic echo /toExplore
+  135  rostopic list
+  136  rostopic echo /odometry/filtered 
+  137  roslaunch husky_viz view_robot.launch
+  138  roslaunch husky_viz view_robot.launch
+  139  roslaunch husky_viz view_robot.launch
+  140  roslaunch husky_viz view_robot.launch
+  141  roslaunch husky_viz view_robot.launch
+  142  roslaunch husky_viz view_robot.launch
+  143  roslaunch husky_viz view_robot.launch
+  144  roslaunch husky_viz view_robot.launch
+  145  roslaunch husky_viz view_robot.launch
+  146  roslaunch husky_gazebo husky_playpen.launch
+  147  roslaunch husky_gazebo husky_playpen.launch
+  148  roslaunch husky_gazebo husky_playpen.launch
+  149  roslaunch husky_gazebo husky_playpen.launch
+  150  roslaunch husky_gazebo husky_playpen.launch
+  151  roslaunch husky_gazebo husky_playpen.launch
+  152  roslaunch husky_gazebo husky_playpen.launch
+  153  roslaunch husky_gazebo husky_playpen.launch
+  154  roslaunch husky_gazebo husky_playpen.launch
+  155  rostopic echo /odometry/filtered
+  156  roslaunch husky_navigation gmapping.launch
+  157  code .
+  158  roslaunch husky_navigation amcl.launch
+  159  roslaunch husky_navigation amcl.launch
+  160  roslaunch husky_navigation gmapping.launch
+  161  roslaunch husky_navigation gmapping.launch
+  162  roslaunch husky_viz view_robot.launch
+  163  roslaunch husky_viz view_robot.launch
+  164  rostopic list
+  165  rosnode info amcl
+  166  rostopic info /amcl_pose 
+  167  rostopic list
+  168  /realsense/parameter_descriptions
+  169  /realsense/parameter_updates
+  170  /rosout
+  171  /rosout_agg
+  172  /scan
+  173  rostopic info /odometry/filtered
+  174  rosmsg info nav_msgs/Odometry
+  175  rostopic echo /amcl_pose
+  176  roslaunch husky_gazebo husky_playpen.launch
+  177  cd catkin_ws/src/Husky/husky_expSLAM/
+  178  python3 LLC.py 
+  179  python3 LLC.py 
+  180  python3 LLC.py 
+  181  python3 LLC.py 
+  182  python3 LLC.py 
+  183  python3 LLC.py 
+  184  python3 LLC.py 
+  185  python3 LLC.py 
+  186  python3 LLC.py 
+  187  python3 LLC.py 
+  188  clear
+  189  python3 LLC.py 
+  190  roslaunch husky_navigation gmapping.launch
+  191  rostopic echo /toExplore
+  192  rostopic echo /toExplore
+  193  rostopic echo /toExplore
+  194  rostopic echo /odometry/filtered 
+  195  roslaunch husky_viz view_robot.launch
+  196  roslaunch husky_viz view_robot.launch
+  197  roslaunch husky_viz view_robot.launch
+  198  roslaunch husky_gazebo husky_playpen.launch
+  199  roslaunch husky_gazebo husky_playpen.launch
+  200  roslaunch husky_gazebo husky_playpen.launch
+  201  roslaunch husky_control teleop_keyboard.launch
+  202  cd catkin_ws/src/Husky/husky_expSLAM/
+  203  clear
+  204  python3 LLC.py
+  205  python3 LLC.py
+  206  python3 LLC.py
+  207  roslaunch husky_gazebo husky_playpen.launch
+  208  roslaunch husky_navigation gmapping.launch
+  209  roslaunch husky_gazebo husky_playpen.launch
+  210  roslaunch husky_gazebo husky_playpen.launch
+  211  roslaunch husky_gazebo husky_playpen.launch
+  212  roslaunch husky_gazebo husky_playpen.launch
+  213  roslaunch husky_gazebo husky_playpen.launch
+  214  roslaunch husky_gazebo husky_playpen.launch
+  215  roslaunch husky_gazebo husky_playpen.launch
+  216  roslaunch husky_gazebo husky_playpen.launch
+  217  roslaunch husky_gazebo husky_playpen.launch
+  218  roslaunch husky_gazebo husky_playpen.launch
+  219  roslaunch husky_gazebo husky_playpen.launch
+  220  python3 LLC.py
+  221  cd catkin_ws/src/Husky/husky_expSLAM/
+  222  clear
+  223  python3 LLC.py
+  224  python3 LLC.py
+  225  python3 LLC.py
+  226  python3 LLC.py
+  227  python3 LLC.py
+  228  python3 LLC.py
+  229  python3 LLC.py
+  230  python3 LLC.py
+  231  python3 LLC.py
+  232  python3 LLC.py
+  233  python3 LLC.py
+  234  python3 LLC.py
+  235  python3 LLC.py
+  236  python3 LLC.py
+  237  python3 LLC.py
+  238  python3 LLC.py
+  239  python3 LLC.py
+  240  python3 LLC.py
+  241  python3 LLC.py
+  242  rostopic echo /amcl_pose 
+  243  python3 LLC.py
+  244  python3 LLC.py
+  245  python3 LLC.py
+  246  python3 LLC.py
+  247  python3 LLC.py
+  248  python3 LLC.py
+  249  python3 LLC.py
+  250  roslaunch husky_viz view_robot.launch
+  251  roslaunch husky_viz view_robot.launch
+  252  roslaunch husky_viz view_robot.launch
+  253  roslaunch husky_viz view_robot.launch
+  254  roslaunch husky_viz view_robot.launch
+  255  roslaunch husky_viz view_robot.launch
+  256  roslaunch husky_viz view_robot.launch
+  257  roslaunch husky_viz view_robot.launch
+  258  roslaunch husky_viz view_robot.launch
+  259  roslaunch husky_viz view_robot.launch
+  260  roslaunch husky_viz view_robot.launch
+  261  roslaunch husky_viz view_robot.launch
+  262  roslaunch husky_viz view_robot.launch
+  263  roslaunch husky_viz view_robot.launch
+  264  roslaunch husky_viz view_robot.launch
+  265  roslaunch husky_navigation amcl.launch
+  266  clear
+  267  roslaunch husky_navigation gmapping.launch
+  268  roslaunch husky_navigation gmapping.launch
+  269  cd ~/catkin_ws/src/Husky/husky_expSLAM
+  270  clear
+  271  python3 odom_rotator.py 
+  272  rosrun tf view_frames
+  273  rqt
+  274  rosrun tf view_frames
+  275  rosrun tf2_tools tf2_monitor
+  276  sudo apt-get install ros-noetic-tf2-tools
+  277  rosrun tf2_tools tf2_monitor
+  278  rqt_graph
+  279  rosrun tf  tf_state_publisher 0 0 0 0 0 0 odom map 10
+  280  rosrun tf  static_tf_publisher 0 0 0 0 0 0 odom map 10
+  281  rosrun tf  static_transform_publisher 0 0 0 0 0 0 odom map 10
+  282  rosrun tf  static_transform_publisher 0 0 0 0 0 0 odom map 5
+  283  rosrun tf  static_transform_publisher 0 0 0 0 0 0 odom map 100
+  284  rosrun tf  static_transform_publisher 0 0 0 0 0 0 odom map 1
+  285  rosrun tf  static_transform_publisher 0 0 0 0 0 0 odom map 0.5
+  286  roslaunch husky_gazebo husky_playpen.launch
+  287  roslaunch husky_gazebo husky_playpen.launch
+  288  roslaunch husky_gazebo husky_playpen.launch
+  289  roslaunch husky_gazebo husky_playpen.launch
+  290  roslaunch husky_viz view_robot.launch
+  291  roslaunch husky_viz view_robot.launch
+  292  roslaunch husky_viz view_robot.launch
+  293  roslaunch husky_viz view_robot.launch
+  294  roslaunch husky_navigation gmapping.launch
+  295  roslaunch husky_navigation gmapping.launch
+  296  git clone https://github.com/mfkasim1/score-based-tutorial.git
+  297  cd score-based-tutorial/
+  298  code .
+  299  pip3 install functorch
+  300  roslaunch husky_viz view_robot.launch 
+  301  roslaunch husky_viz view_model.launch 
+  302  roslaunch husky_viz view_robot.launch 
+  303  clear
+  304  roslaunch husky_viz view_robot.launch 
+  305  roslaunch husky_viz view_robot.launch 
+  306  roslaunch husky_gazebo playpen.launch 
+  307  roslaunch husky_gazebo playpen.launch 
+  308  roslaunch husky_gazebo playpen.launch 
+  309  roslaunch husky_gazebo playpen.launch 
+  310  roslaunch husky_gazebo playpen.launch 
+  311  roslaunch husky_gazebo playpen.launch 
+  312  roslaunch husky_gazebo husky_playpen.launch 
+  313  roslaunch husky_gazebo husky_playpen.launch 
+  314  roslaunch husky_viz view_robot.launch 
+  315  ls catkin_ws/src/
+  316  ls
+  317  cd catkin_ws/src/
+  318  ls
+  319  cd hector_slam/
+  320  ls
+  321  ls hector_slam_launch/
+  322  ls hector_slam_launch/launch/
+  323  rosrun tf static_transform_publisher map odom 0 0 0 0 0 0 10
+  324  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  325  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  326  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  327  roslaunch husky_control teleop_keyboard.launch
+  328  roslaunch husky_control teleop_keyboard.launch
+  329  roslaunch husky_control teleop_keyboard.launch
+  330  cd catkin_ws/src/Husky/husky_expSLAM/
+  331  ls
+  332  ls
+  333  nano global_path_planner.py 
+  334  cd catkin_ws/src/Husky/husky_expSLAM/
+  335  ls
+  336  nano LLC.py 
+  337  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  338  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  339  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  340  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  341  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  342  roscore
+  343  roscore
+  344  roscore
+  345  roscore
+  346  roslaunch carsim_gazebo assembler.launch
+  347  roslaunch carsim_gazebo assembler.launch
+  348  roslaunch carsim_gazebo assembler.launch
+  349  roslaunch carsim_gazebo assembler.launch
+  350  roslaunch carsim_gazebo assembler.launch
+  351  roslaunch carsim_gazebo assembler.launch
+  352  roslaunch carsim_gazebo carsim.launch
+  353  roslaunch carsim_gazebo carsim.launch
+  354  roslaunch carsim_gazebo carsim.launch
+  355  roslaunch carsim_gazebo carsim.launch
+  356  roslaunch carsim_gazebo carsim.launch
+  357  roslaunch carsim_gazebo carsim.launch
+  358  roslaunch carsim_gazebo carsim.launch
+  359  roslaunch carsim_gazebo carsim.launch
+  360  roslaunch carsim_gazebo carsim.launch
+  361  roslaunch carsim_gazebo carsim.launch
+  362  roslaunch carsim_gazebo carsim.launch
+  363  roslaunch carsim_gazebo carsim.launch
+  364  roslaunch carsim_gazebo carsim.launch
+  365  roslaunch carsim_gazebo carsim.launch
+  366  roslaunch carsim_gazebo carsim.launch
+  367  roslaunch carsim_gazebo carsim.launch
+  368  roslaunch carsim_gazebo carsim.launch
+  369  roslaunch carsim_gazebo carsim.launch
+  370  roslaunch carsim_gazebo carsim.launch
+  371  rosluanch husky_control teleop_keyboard.launch
+  372  roslaunch husky_control teleop_keyboard.launch
+  373  cd catkin_ws/src/
+  374  clear
+  375  git clone https://github.com/Tinker-Twins/Husky.git
+  376  cd ..
+  377  catkin_make
+  378  cd src/Husky/husky_expSLAM/
+  379  python3 LLC.py 
+  380  python3 LLC.py 
+  381  python3 LLC.py 
+  382  python3 LLC.py 
+  383  roslaunch husky_control teleop_keyboard.launch
+  384  roslaunch husky_control teleop_keyboard.launch
+  385  roslaunch husky_navigation gmapping.launch
+  386  IP ADDRESS
+  387  ip address
+  388  clear
+  389  ip address
+  390  cd catkin_ws/src/Husky/husky_expSLAM/
+  391  cd informed-rrt-star/
+  392  clear
+  393  python3 rrt_star.py 
+  394  python3 rrt_star.py 
+  395  /bin/python /home/aditya/catkin_ws/src/Husky/husky_expSLAM/informed-rrt-star/rrt_star.py
+  396  cd husky_expSLAM/informed-rrt-star/
+  397  clear
+  398  /bin/python /home/aditya/catkin_ws/src/Husky/husky_expSLAM/informed-rrt-star/rrt_star.py
+  399  /bin/python /home/aditya/catkin_ws/src/Husky/husky_expSLAM/informed-rrt-star/rrt_star.py
+  400  /bin/python /home/aditya/catkin_ws/src/Husky/husky_expSLAM/informed-rrt-star/rrt_star.py
+  401  python3 informed_rrt_star.py 
+  402  python3 informed_rrt_star.py 
+  403  /bin/python /home/aditya/catkin_ws/src/Husky/husky_expSLAM/informed-rrt-star/informed_rrt_star.py
+  404  cd husky_expSLAM/informed-rrt-star/
+  405  /bin/python /home/aditya/catkin_ws/src/Husky/husky_expSLAM/informed-rrt-star/informed_rrt_star.py
+  406  roslaunch husky_gazebo husky_playpen.launch 
+  407  roslaunch husky_gazebo husky_playpen.launch 
+  408  clear
+  409  roslaunch carsim_gazebo rviz.launch
+  410  roslaunch carsim_gazebo carsim.launch
+  411  roslaunch carsim_gazebo carsim.launch
+  412  roslaunch carsim_gazebo carsim.launch
+  413  roslaunch carsim_gazebo carsim.launch
+  414  roslaunch husky_gazebo husky_playpen.launch 
+  415  roslaunch husky_gazebo husky_playpen.launch 
+  416  roslaunch husky_gazebo husky_playpen.launch 
+  417  cd catkin_ws/src/Husky/husky_expSLAM/
+  418  clear
+  419  python3 LLC.py 
+  420  python3 LLC.py 
+  421  python3 LLC.py 
+  422  rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 10
+  423  roslaunch husky_navigation gmapping.launch 
+  424  roslaunch husky_navigation gmapping.launch 
+  425  roslaunch husky_navigation gmapping.launch 
+  426  roslaunch husky_viz view_robot.launch 
+  427  roslaunch husky_viz view_robot.launch 
+  428  roslaunch husky_viz view_robot.launch 
+  429  roslaunch husky_control teleop_keyboard.launch 
+  430  roslaunch husky_control teleop_keyboard.launch 
+  431  roslaunch carsim_gazebo carsim.launch 
+  432  dmidecode -t system | grep Serial
+  433  sudo dmidecode -t system | grep Serial
+  434  sudo dmidecode -t system | grep Serial'
+  435  sudo dmidecode -t system | grep Serial
+  436  startx
+  437  git clone https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers.git
+  438  cd Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
+  439  code .
+  440  mkdir -p ~/miniconda3
+  441  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+  442  ash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+  443  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+  444  rm -rf ~/miniconda3/miniconda.sh
+  445  ~/miniconda3/bin/conda init bash
+  446  python3 --version
+  447  pip3 uninstall numba
+  448  pip3 uninstall pymc
+  449  pip install --upgrade numba
+  450  pip install --upgrade pymc
+  451  pip3 uninstall pymc
+  452  pip3 uninstall numba
+  453  pip install --upgrade numba
+  454  pip install pymc3
+  455  numpy --version
+  456  pip install --upgrade numpy theano pymc3
+  457  pip install --upgrade theano
+  458  pip3 install --upgrade theano
+  459  clear
+  460  pip3 show numpy
+  461  pip show numpy
+  462  conda create -c conda-forge -n pymc_env "pymc>=5"
+  463  clear
+  464  conda activate pymc_env
+  465  conda
+  466  conda create -c conda-forge -n pymc_env "pymc>=5"
+  467  conda activate pymc_env
+  468  which python
+  469  cd Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
+  470  clear 
+  471  code .
+  472  conda list
+  473  conda info --envs
+  474  conda activate pymc_env
+  475  pip show matplotlib
+  476  conda deactivate
+  477  pip show matplotlib
+  478  conda deactivate
+  479  pip show matplotlib
+  480  pip3 show matplotlib
+  481  python3
+  482  conda activate pymc_env
+  483  clear
+  484  conda install -c conda-forge matplotlib
+  485  pip show matplotlib
+  486  git clone https://github.com/nishi1612/Modelling-and-Simulation.git
+  487  htop
+  488  htop
+  489  htop
+  490  hostname
+  491  htop
+  492  htop
+  493  htop
+  494  code .
+  495  git clone https://github.com/aditya-jha13/bayesian-ab-testing.git
+  496  conda deactivate
+  497  clear
+  498  ls
+  499  exit
+  500  script -a ~/myunixsession
+  501  conda deactivate
+  502  ls
+  503  pwd
+  504  cd ..
+  505  ls
+  506  ls -F
+  507  ls --help
+  508  cd aditya/
+  509  ls -F Desktop
+  510  ls -F ./shell-lesson-data/
+  511  cd shell-lesson-data/
+  512  ls -F
+  513  ls -F ./exercise-data/
+  514  ls -F -a
+  515  ls -s exercise-data/
+  516  ls north-pacific-gyre/goo
+  517  cd exercise-data/writing/
+  518  ls
+  519  mkdir thesis
+  520  ls -F
+  521  mkdir -p ../project/data ../project/results
+  522  ls -FR ../project/
+  523  cd thesis
+  524  nano draft.txt
+  525  ls
+  526  touch my_file.txt
+  527  rm my_file.txt 
+  528  cd ..
+  529  mv thesis/draft.txt thesis/quotes.txt
+  530  ls thesis
+  531  mv thesis/quotes.txt .
+  532  ls thesis/
+  533  cp quotes.txt thesis/quotations.txt
+  534  ls thesis
+  535  cp -r --help
+  536  cp -r thesis thesis_backup
+  537  ls thesis thesis_backup/
+  538  rm quotes.txt 
+  539  rm -r -i thesis
+  540  ls ../alkanes
+  541  wc cubane.pdb
+  542  cd ../alkanes
+  543  wc cubanes.pdb
+  544  ls
+  545  wc cubane.pdb
+  546  wc *.pdb
+  547  wc -l *.pdb > lengths.txt
+  548  cat lengths.txt
+  549  sort -n lengths.txt 
+  550  sort -n lengths.txt 
+  551  sort -n lengths.txt > sorted-length.txt
+  552  head -n 5 sorted-length.txt 
+  553  wc -l *.pdb | sort -n | head -n 5
+  554  ls
+  555  cd ../../north-pacific-gyre/
+  556  wc -l *.txt
+  557  wc -l *.txt | head -n 5
+  558  wc -l *.txt | sort -n| head -n 5
+  559  wc -l *.txt | sort -n| tail -n 5
+  560  cd ../exercise-data/creatures/
+  561  ls
+  562  head -n 5 basilisk.dat minotaur.dat unicorn.dat 
+  563  tail -n 1 basilisk.dat minotaur.dat unicorn.dat 
+  564  for f in basilisk.dat minotaur.dat unicorn.dat ; do echo $f; head -n 2 $f | tail -n 1; done
+  565  for d in *.pdb; do ls *.pdb; done
+  566  cd ../../exercise-data/alkanes/
+  567  for d in *.pdb; do cat $d>>all.pdb; done
+  568  cat all.pdb
+  569  cd ../creatures/
+  570  for x in *.dat; do $x; head -n 100 $x|tail -n 20; done
+  571  for x in *.dat; do cp $x original-$x; done
+  572  cd ../../north-pacific-gyre/
+  573  for x in NENE*.txt NENE*.txt; do echo $x stats-$x; done
+  574  for x in NENE*.txt NENE*.txt; do bash goostats.sh $x stats-$x; done
+  575  for x in NENE*.txt NENE*.txt; do echo $x; do bash goostats.sh $x stats-$x; done
+  576  for x in NENE*.txt NENE*.txt;do echo $x; do bash goostats.sh $x stats-$x; done
+  577  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile; bash goostats.sh $datafile stats-$datafile; done
+  578  history
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ cd ../exercise-data/alkanes/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano middle.sh
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;45H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                  middle.sh                                            [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d[39;49m(B[m[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m
+[2dh[?12l[?25h[?25le[?12l[?25h[?25la[?12l[?25h[?25l
+(B[0;1m[34mhead[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l -[?12l[?25h[?25l(B[0;1m[35m -n[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l 1[?12l[?25h[?25l5[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l o[?12l[?25h[?25lc[?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25le[?12l[?25h[?25l.[?12l[?25h[?25lp[?12l[?25h[?25ld[?12l[?25h[?25lb[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l [32m|[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l t[?12l[?25h[?25la
+[53d[K[2;27H[?12l[?25h[?25li[?12l[?25h[?25l(B[0;1m[34mtail[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l -[?12l[?25h[?25l(B[0;1m[35m -n[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l 5[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: middle.sh                                                                        [53;1H(B[m[53;30H[?12l[?25h[?25l
+[53;30H[?12l[?25h[?25l
+[53;30H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 1 line ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2;34H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ bash middle.sh 
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano 
+all.pdb            ethane.pdb         methane.pdb        octane.pdb         propane.pdb
+cubane.pdb         lengths.txt        middle.sh          pentane.pdb        sorted-length.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano middle.sh 
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;50H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 4.8                                  middle.sh                                            [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d(B[0;1m[34mhead[35m -n[39m(B[m 15 octane.pdb [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5
+[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25l1[?12l[?25h[?25l5[?12l[?25h[?25l [?12l[?25h[?25lo[?12l[?25h[?25lc[?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25le[?12l[?25h[?25l.[?12l[?25h[?25lp[?12l[?25h[?25ld[?12l[?25h[?25lb[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[2;21H[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P
+[53d[K[2;17H[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l" [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;13H[?12l[?25h[?25l[32m$[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;14H[?12l[?25h[?25l(B[0;1m[31m$1[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;15H[?12l[?25h[?25l(B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;16H[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: middle.sh                                                                        [53;1H(B[m[53;30H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 1 line ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2;16H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ bas
+base32    base64    basename  bash      bashbug   
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ bash
+bash     bashbug  
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ bash middle.sh octane.pdb 
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ bash[K[K[K[Kbash middle.sh octane.pdb [11Pnano middle.sh[C
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;50H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 4.8                                  middle.sh                                            [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d(B[0;1m[34mhead[35m -n[39m(B[m 15 (B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5
+[?12l[?25h[?25l[3d[?12l[?25h[?25l[A[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25l1[?12l[?25h[?25l5[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[2;10H[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l[32m$[39m(B[m (B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;10H[?12l[?25h[?25l(B[0;1m[31m$2[39m(B[m (B[0;1m[33m"$1"[39m(B[m [32m|[39m(B[m (B[0;1m[34mtail[35m -n[39m(B[m 5[2;11H[?12l[?25h[?25l [?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25l[C[?12l[?25h[?25l
+[53d[K[2;21H[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l [?12l[?25h[?25l5[?12l[?25h[?25l
+[3d[?12l[?25h[?25l[?12l[?25h[?25l[2;28H[?12l[?25h[?25l[42m [49m(B[m[K[?12l[?25h[?25l [32m$[39m(B[m[?12l[?25h[?25l(B[0;1m[31m$3[39m(B[m[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: middle.sh                                                                        [53;1H(B[m[53;30H[?12l[?25h[?25l
+[53;30H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 1 line ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2;29H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano middle.sh [11@bash middle.sh octane.pdb[C15 
+ 5
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano sorted.sh
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;45H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                  sorted.sh                                            [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d[39;49m(B[m[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m
+[2dw[?12l[?25h[?25lc[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l -[?12l[?25h[?25l(B[0;1m[35m -n[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l '[?12l[?25h[?25l[42m [49m(B[m[K[?12l[?25h[?25l "[?12l[?25h[?25l(B[0;1m[33m""[39m(B[m[?12l[?25h[?25l[?12l[?25h[?25l(B[0;1m[33m$"[39m(B[m[?12l[?25h[?25l(B[0;1m[33m@"[39m(B[m[?12l[?25h[?25l[C[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l [32m|[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l s[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25l(B[0;1m[34msort[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l [32m=[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[K[?12l[?25h[?25l -[?12l[?25h[?25l(B[0;1m[35m -n
+[53d[39m(B[m[K[2;21H[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: sorted.sh                                                                        [53;1H(B[m[53;30H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 1 line ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2;21H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ bash sorted.sh *.pdb ../creq 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Catures/*.dat
+wc: invalid option -- 'n'
+Try 'wc --help' for more information.
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano sorted
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;45H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                   sorted                                              [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d[39;49m(B[m[?12l[?25h[?25l[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nann[Ko sorted.sh 
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;44H(B[0;7m[ Reading... ](B[m[53;50H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 4.8                                  sorted.sh                                            [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d[39;49m(B[mwc(B[0;1m[35m -n[39m(B[m (B[0;1m[33m"$@"[39m(B[m [32m|[39m(B[m (B[0;1m[34msort[35m -n
+[39m(B[m[?12l[?25h[?25lw[?12l[?25h[?25lc[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[C[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m[2;3H -[1P[?12l[?25h[?25l(B[0;1m[35m -l[39m(B[m (B[0;1m[33m"$@"[39m(B[m [32m|[39m(B[m (B[0;1m[34msort[35m -n[6G[39m(B[m[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: sorted.sh                                                                        [53;1H(B[m[53;30H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 1 line ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2;6H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ nano sorted.sh [Kbash sorted.sh *.pdb ../creatures/*.dat
+    9 methane.pdb
+   12 ethane.pdb
+   15 propane.pdb
+   20 cubane.pdb
+   21 pentane.pdb
+   30 octane.pdb
+  107 all.pdb
+  163 ../creatures/basilisk.dat
+  163 ../creatures/minotaur.dat
+  163 ../creatures/original-basilisk.dat
+  163 ../creatures/original-minotaur.dat
+  163 ../creatures/original-unicorn.dat
+  163 ../creatures/unicorn.dat
+ 1192 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ cd ../../
+exercise-data/      north-pacific-gyre/ 
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/alkanes$ cd ../../north-pacific-gyre/ 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ nano do-stats.sh
+[?2004h[?1049h[22;0;0t[1;55r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[53;45H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                 do-stats.sh                                           [1;100H(B[m
+[54d(B[0;7m^G(B[m Get Help   (B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo
+[55d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[2d[39;49m(B[m[?12l[?25h[?25l[1;92H(B[0;7mModified(B[m
+[2df[?12l[?25h[?25lo[?12l[?25h[?25l
+[32mfor[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l x[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l i[?12l[?25h[?25l[32min[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l "[?12l[?25h[?25l[32m$[39m(B[m[?12l[?25h[?25l(B[0;1m[31m$@[39m(B[m[?12l[?25h[?25l(B[0;1m[33m"$@"[39m(B[m[?12l[?25h[?25l
+[3d[?12l[?25h[?25ld[?12l[?25h[?25l[32mdo[39m(B[m[?12l[?25h[?25l
+[4d[?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25l
+(B[0;1m[34mecho[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l [32m$[39m(B[m[?12l[?25h[?25l(B[0;1m[31m$x[39m(B[m[?12l[?25h[?25l
+[5d[?12l[?25h[?25lb[53d[K[5db[?12l[?25h[?25la[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l g[?12l[?25h[?25lo[?12l[?25h[?25lo[?12l[?25h[?25ls[?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25ls[?12l[?25h[?25l.[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l [32m$[39m(B[m[?12l[?25h[?25l(B[0;1m[31m$x[39m(B[m[?12l[?25h[?25l[42m [49m(B[m[?12l[?25h[?25l s[?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25ls[?12l[?25h[?25l-[?12l[?25h[?25l[32m$[39m(B[m[?12l[?25h[?25l(B[0;1m[31m$x[39m(B[m[?12l[?25h[?25l
+[6d[?12l[?25h[?25ld[?12l[?25h[?25l[32mdo[39m(B[m[?12l[?25h[?25l
+don[?12l[?25h[?25l
+[32mdone[39m(B[m[?12l[?25h[?25l
+[7d[?12l[?25h[?25l[6;5H[?12l[?25h[?25l[54;15H           (B[0;7mM-D(B[m DOS Format           (B[0;7mM-A(B[m Append[15X[54;76H(B[0;7mM-B(B[m Backup File[K[55;2H(B[0;7mC(B[m Cancel[16X[55;26H(B[0;7mM-M(B[m Mac Format           (B[0;7mM-P(B[m Prepend[14X[55;76H(B[0;7m^T(B[m To Files[K
+[53d(B[0;7mFile Name to Write: do-stats.sh                                                                      [53;1H(B[m[53;32H[?12l[?25h[?25l[53;43H[1K (B[0;7m[ Writing... ](B[m[K[1;92H(B[0;7m        (B[m[53;43H(B[0;7m[ Wrote 5 lines ](B[m[54;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut Text   (B[0;7m^J(B[m Justify    (B[0;7m^C(B[m Cur Pos    (B[0;7mM-U(B[m Undo[55;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste Text (B[0;7m^T(B[m To Spell   (B[0;7m^_(B[m Go To Line (B[0;7mM-E(B[m Redo
+[53d[6;5H[?12l[?25h[?25l
+[53d[J[55d[?12l[?25h[55;1H[?1049l[23;0;0t
+[?1l>[?2004laditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ bah[Ksh do-stats.sh NENE*A.txt NEN 
+E*B.txt
+NENE01729A.txt
+NENE01736A.txt
+NENE01751A.txt
+NENE01812A.txt
+NENE01843A.txt
+NENE01978A.txt
+NENE02040A.txt
+NENE02043A.txt
+NENE01729B.txt
+NENE01751B.txt
+NENE01843B.txt
+NENE01978B.txt
+NENE02018B.txt
+NENE02040B.txt
+NENE02043B.txt
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/north-pacific-gyre$ cd .//[K[K./exercise-data/writing/
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ catn[K haiku.txt 
+The Tao that is seen
+Is not the true Tao, until
+You bring fresh toner.
+
+With searching comes loss
+and the presence of absence:
+"My Thesis" not found.
+
+Yesterday it worked
+Today it is not working
+Software is like that.
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ grep not haiku.txt 
+Is not the true Tao, until
+"My Thesis" not found.
+Today it is not working
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ grep -n it haiku.txt 
+5:With searching comes loss
+9:Yesterday it worked
+10:Today it is not working
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ grep -n -w -v the haiku.txt  
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K 
+1:The Tao that is seen
+3:You bring fresh toner.
+4:
+5:With searching comes loss
+7:"My Thesis" not found.
+8:
+9:Yesterday it worked
+10:Today it is not working
+11:Software is like that.
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ grep -r Yesterday .
+./haiku.txt:Yesterday it worked
+./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
+
+./LittleWomen.txt:Yesterday at dinner, when an Austrian officer stared at us and then
+
+./LittleWomen.txt:Yesterday was a quiet day spent in teaching, sewing, and writing in my
+
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data/writing$ cd ..
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data$ find .
+.
+./creatures
+./creatures/original-basilisk.dat
+./creatures/minotaur.dat
+./creatures/unicorn.dat
+./creatures/basilisk.dat
+./creatures/original-minotaur.dat
+./creatures/original-unicorn.dat
+./animal-counts
+./animal-counts/animals.csv
+./writing
+./writing/haiku.txt
+./writing/thesis_backup
+./writing/thesis_backup/quotations.txt
+./writing/LittleWomen.txt
+./numbers.txt
+./alkanes
+./alkanes/cubane.pdb
+./alkanes/methane.pdb
+./alkanes/lengths.txt
+./alkanes/pentane.pdb
+./alkanes/all.pdb
+./alkanes/middle.sh
+./alkanes/sorted-length.txt
+./alkanes/octane.pdb
+./alkanes/ethane.pdb
+./alkanes/sorted.sh
+./alkanes/propane.pdb
+./project
+./project/data
+./project/results
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data$ find . -type d
+.
+./creatures
+./animal-counts
+./writing
+./writing/thesis_backup
+./alkanes
+./project
+./project/data
+./project/results
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data$ wc -l $(find . -name "*.txt")
+     11 ./writing/haiku.txt
+      2 ./writing/thesis_backup/quotations.txt
+  21022 ./writing/LittleWomen.txt
+      5 ./numbers.txt
+      7 ./alkanes/lengths.txt
+      7 ./alkanes/sorted-length.txt
+  21054 total
+aditya@aditya-Aspire-A715-75G:~/shell-lesson-data/exercise-data$ exit
+exit
+
+Script done on 2024-06-18 03:31:22+05:30 [COMMAND_EXIT_CODE="0"]

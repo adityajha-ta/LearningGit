@@ -1,0 +1,260 @@
+Script started on 2024-06-22 03:25:35+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+(base) aditya@aditya-Aspire-A715-75G:~$ [K(base) aditya@aditya-Aspire-A715-75G:~$ conda deactivate
+aditya@aditya-Aspire-A715-75G:~$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+aditya@aditya-Aspire-A715-75G:~$ git config --list ss[K[K--show-orgi[K[Kigin
+[?1h=file:/home/aditya/.gitconfig    user.email=jha.aditya2121@gmail.com[m
+file:/home/aditya/.gitconfig    user.name=aditya-jha13[m
+file:/home/aditya/.gitconfig    credential.helper=cache[m
+file:.git/config        core.repositoryformatversion=0[m
+file:.git/config        core.filemode=true[m
+file:.git/config        core.bare=false[m
+file:.git/config        core.logallrefupdates=true[m
+file:.git/config        remote.origin.url=git@github.com:aditya-jha13/jpmc-quant-challenge.git[m
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~$ git config --show init.[K[K[K[K[K[K[K[K[K[Kglosn [K[K[Kbl[Ks[Kal list
+error: key does not contain a section: list
+aditya@aditya-Aspire-A715-75G:~$ git config --global list-list-list
+[?1h=user.email=jha.aditya2121@gmail.com[m
+user.name=aditya-jha13[m
+credential.helper=cache[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~$ got [K[K[Kit config --system --list
+[?1h=fatal: unable to read config file '/etc/gitconfig': No such file or directory[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~$ git config --system --list[C[1P --list[1P --list[1P --list[1P --list[1P --list[1P --listl --listo --listc --lista --listl --list
+[?1h=core.repositoryformatversion=0[m
+core.filemode=true[m
+core.bare=false[m
+core.logallrefupdates=true[m
+remote.origin.url=git@github.com:aditya-jha13/jpmc-quant-challenge.git[m
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~$ =[Kgit config --global init.defaultBrac[Knch
+aditya@aditya-Aspire-A715-75G:~$ mkdir learninScript started on 2024-06-22 08:13:08+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+(base) aditya@aditya-Aspire-A715-75G:~$ conda deactivate
+aditya@aditya-Aspire-A715-75G:~$ git [K[K[K[Kcd LearningGit/
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git init
+Reinitialized existing Git repository in /home/aditya/LearningGit/.git/
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git config --list --show-origin
+[?1h=file:/home/aditya/.gitconfig    user.email=jha.aditya2121@gmail.com[m
+file:/home/aditya/.gitconfig    user.name=aditya-jha13[m
+file:/home/aditya/.gitconfig    credential.helper=cache[m
+file:.git/config        core.repositoryformatversion=0[m
+file:.git/config        core.filemode=true[m
+file:.git/config        core.bare=false[m
+file:.git/config        core.logallrefupdates=true[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git config --lisg[Kt
+[?1h=user.email=jha.aditya2121@gmail.com[m
+user.name=aditya-jha13[m
+credential.helper=cache[m
+core.repositoryformatversion=0[m
+core.filemode=true[m
+core.bare=false[m
+core.logallrefupdates=true[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git config -h
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git config --global --list
+[?1h=user.email=jha.aditya2121@gmail.com[m
+user.name=aditya-jha13[m
+credential.helper=cache[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ cd .git/
+aditya@aditya-Aspire-A715-75G:~/LearningGit/.git$ ls -F1
+branches/
+config
+description
+HEAD
+hooks/
+info/
+objects/
+refs/
+aditya@aditya-Aspire-A715-75G:~/LearningGit/.git$ find objects/
+objects/
+objects/pack
+objects/info
+aditya@aditya-Aspire-A715-75G:~/LearningGit/.git$ echo 'test content' | git hash-object -w --stdin
+d670460b4b4aece5915caf5c68d12f560a9fe3e4
+aditya@aditya-Aspire-A715-75G:~/LearningGit/.git$ find /i[Kob[K[K[Kobjects/ -type f
+objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4
+aditya@aditya-Aspire-A715-75G:~/LearningGit/.git$ git ct[Kat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4
+test content
+aditya@aditya-Aspire-A715-75G:~/LearningGit/.git$ cd ..
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo 'version1 [K[K 1 [K;[K' >> test.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git hs[Kash-object -w test.txt 
+83baae61804e65cc73a7201a7252750c76066a30
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo 'versopn[K[K[Kion 2' >> tests.[K[K.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo 'version 2' >> test.txtgit hash-object -w test.txt 
+0c1e7391ca4e59584f8b773ecdbbb9467eba1547
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ find .git/obe[Kjects/ -type f
+.git/objects/0c/1e7391ca4e59584f8b773ecdbbb9467eba1547
+.git/objects/83/baae61804e65cc73a7201a7252750c76066a30
+.git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p master^{tree}
+fatal: Not a valid object name master^{tree}
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p master^{tree}''master^{tree}'
+fatal: Not a valid object name master^{tree}
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p 'master^{tree}'[K[1Pmaster^{tree}"master^{tree}[C[C[C[C[C[C[C[C[C[C[C[C[C"
+fatal: Not a valid object name master^{tree}
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p "master^{tree}"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mREADME.txt[m
+	[31mtest.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git hash-object -w README.txt 
+b88da5a851660c299d3435392dcd2ac851210c40
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git update-index --add --cache [Kinfo 100644 b88da5a851660c299d3435392dcd2ac851210c40 README.txt 
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git[K[K[Kgit update-index --add --cacheinfo 100644 b88da5a851660c299d3435392dcd2ac851210c40 README.txt [K[K[K[K[K[K[K[K[K[K[Ktest.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1P test.txt[C[C[C[C[C[C[C[1P test.txt[C[C[C[C[C[C[1P test.txt[C[C[C[C[C[1P test.txt[C[C[C[C[1P test.txt[C[C[C[1P test.txt[C[C[1P test.txt[C[1P test.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C t[1Pest.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C te[1Pst.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C tes[1Pt.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C test[1P.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C test.[1Ptxt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C test.t[1Pxt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C test.tx[1Pt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C test.txt[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C test.txt [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P test.txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P test.txt[1P test.txt[1P test.txt[1P test.txt[1Ptest.txt[C test.txt0c1e7391ca4e59584f8b773ecdbbb9467eba1547 test.txt[C[C[C[C[C[C[C[C[C
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git update-index --add --cacheinfo 100644 0c1e7391ca4e59584f8b773ecdbbb9467eba1547 test.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cb88da5a851660c299d3435392dcd2ac851210c40 README.txt [A[C[C[C[C[C[C[C[C[C[C[C[26Phash-object -w README.txt 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cupdate-index --add --cacheinfo 100644 b88da5a851660c299d3435392dcd2ac851210c40 README.txt [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0c1e7391ca4e595[3P84f8b773ecdbbb9467eba1547 test.txt[A[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgo[Kit statis[K[Kus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README.txt[m
+	[32mnew file:   test.txt[m
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git write-tree
+ccd32bd3c80b41134614cef2ac2a7b49217521de
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p ccd32bd3c80b41134614cef2ac2a7b49217521de [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ke
+100644 blob b88da5a851660c299d3435392dcd2ac851210c40	README.txt
+100644 blob 0c1e7391ca4e59584f8b773ecdbbb9467eba1547	test.txt
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p ccd32bd3c80b41134614cef2ac2a7b49217521de [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwrite-tree[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pstatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README.txt[m
+	[32mnew file:   test.txt[m
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ echo 'First COmm[K[K[Kommit' | git [K commit-tree ccd32b
+7baca1e5210cb3419cde58ddcf42c50450465076
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git cat-file -p 7bar[Kca1
+tree ccd32bd3c80b41134614cef2ac2a7b49217521de
+author aditya-jha13 <jha.aditya2121@gmail.com> 1719026926 +0530
+committer aditya-jha13 <jha.aditya2121@gmail.com> 1719026926 +0530
+
+First Commit
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README.txt[m
+	[32mnew file:   test.txt[m
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --stat 7baca1
+[?1h=[33mcommit 7baca1e5210cb3419cde58ddcf42c50450465076[m[m
+Author: aditya-jha13 <jha.aditya2121@gmail.com>[m
+Date:   Sat Jun 22 08:58:46 2024 +0530[m
+[m
+    First Commit[m
+[m
+ README.txt | 23 [32m+++++++++++++++++++++++[m[m
+ test.txt   |  2 [32m++[m[m
+ 2 files changed, 25 insertions(+)[m
+[K[?1l>aditya@aditya-Aspire-A715-75G:~/LearningGit$ git log --stat 7baca1[11Pstatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README.txt[m
+	[32mnew file:   test.txt[m
+
+aditya@aditya-Aspire-A715-75G:~/LearningGit$ exit
+exit
+
+Script done on 2024-06-22 09:04:20+05:30 [COMMAND_EXIT_CODE="0"]
